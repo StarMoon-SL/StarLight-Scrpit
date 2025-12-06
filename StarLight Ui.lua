@@ -4129,14 +4129,19 @@ function StarLight:CreateWindow(Info)
 	return Window
 end
 
-function StarLight:Toggle()
-	StarLight.Toggled = not StarLight.Toggled
-	Window.Background.Visible = StarLight.Toggled
-	MobileToggleButtons.Open.ImageColor3 = StarLight.Toggled and 
-		StarLight:GetColor("Accents.Main") or StarLight:GetColor("Foregrounds.Light")
+-- 在文件末尾补充完整以下函数
+function Window:SetVisible(Visible: boolean)
+    Background.Visible = Visible
 end
 
---// Show mobile buttons on start if mobile
+function StarLight:Toggle()
+    StarLight.Toggled = not StarLight.Toggled
+    Background.Visible = StarLight.Toggled
+    MobileToggleButtons.Open.ImageColor3 = StarLight.Toggled and 
+        StarLight:GetColor("Accents.Main") or StarLight:GetColor("Foregrounds.Light")
+end
+
+-- 显示移动端按钮
 MobileToggleButtons.Open.Visible = StarLight.IsMobile
 MobileToggleButtons.Lock.Visible = StarLight.IsMobile
 
