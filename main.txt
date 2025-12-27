@@ -1,0 +1,3384 @@
+--[[
+            ___     _,.---._                  ,---.                 
+    .-._ .'=.'\  ,-.' , -  `.   _,..---._  .--.'  \       _.-.     
+    /==/ \|==|  |/==/_,  ,  - \/==/,   -  \ \==\-/\ \    .-,.'|     
+    |==|,|  / - |==|   .=.     |==|   _   _\/==/-|_\ |  |==|, |     
+    |==|  \/  , |==|_ : ;=:  - |==|  .=.   |\==\,   - \ |==|- |     
+    |==|- ,   _ |==| , '='     |==|,|   | -|/==/ -   ,| |==|, |     
+    |==| _ /\   |\==\ -    ,_ /|==|  '='   /==/-  /\ - \|==|- `-._  
+    /==/  / / , / '.='. -   .' |==|-,   _`/\==\ _.\=\.-'/==/ - , ,/ 
+    `--`./  `--`    `--`--''   `-.`.____.'  `--`        `--`-----'  
+
+    Modal - UI Library for Roblox
+    github.com/lxte/Modal > for the full source
+--]]
+
+local moduleData = {
+    {1, 'ModuleScript', {'MainModule'}, {
+        {2, 'Folder', {'Components'}, {
+            {14, 'Folder', {'Popups'}, {
+                {15, 'ModuleScript', {'ColorPicker'}},
+                {16, 'ModuleScript', {'Dropdown'}},
+                {17, 'ModuleScript', {'Notification'}}
+            }},
+            {3, 'Folder', {'Buttons'}, {
+                {11, 'ModuleScript', {'Slider'}},
+                {4, 'ModuleScript', {'Button'}},
+                {5, 'ModuleScript', {'ColorPicker'}},
+                {12, 'ModuleScript', {'Title'}},
+                {13, 'ModuleScript', {'Toggle'}},
+                {7, 'ModuleScript', {'Holder'}},
+                {9, 'ModuleScript', {'Keybind'}},
+                {10, 'ModuleScript', {'MultiDropdown'}},
+                {6, 'ModuleScript', {'Dropdown'}},
+                {8, 'ModuleScript', {'Input'}}
+            }},
+            {18, 'ModuleScript', {'Window'}, {
+                {19, 'ModuleScript', {'Tab'}}
+            }}
+        }},
+        {20, 'Folder', {'Packages'}, {
+            {99, 'ModuleScript', {'Fusion'}},
+            {21, 'Folder', {'.pesde'}, {
+                {22, 'Folder', {'elttob_fusion@0.3.0'}, {
+                    {23, 'Folder', {'fusion'}, {
+                        {24, 'ModuleScript', {'src'}, {
+                            {39, 'ModuleScript', {'External'}},
+                            {76, 'ModuleScript', {'RobloxExternal'}},
+                            {64, 'Folder', {'Memory'}, {
+                                {70, 'ModuleScript', {'legacyCleanup'}},
+                                {65, 'ModuleScript', {'checkLifetime'}},
+                                {69, 'ModuleScript', {'innerScope'}},
+                                {75, 'ModuleScript', {'whichLivesLonger'}},
+                                {66, 'ModuleScript', {'deriveScope'}},
+                                {67, 'ModuleScript', {'deriveScopeImpl'}},
+                                {71, 'ModuleScript', {'needsDestruction'}},
+                                {72, 'ModuleScript', {'poisonScope'}},
+                                {74, 'ModuleScript', {'scoped'}},
+                                {68, 'ModuleScript', {'doCleanup'}},
+                                {73, 'ModuleScript', {'scopePool'}}
+                            }},
+                            {47, 'Folder', {'Instances'}, {
+                                {55, 'ModuleScript', {'OnChange'}},
+                                {52, 'ModuleScript', {'Children'}},
+                                {59, 'ModuleScript', {'defaultProps'}},
+                                {49, 'ModuleScript', {'AttributeChange'}},
+                                {51, 'ModuleScript', {'Child'}},
+                                {48, 'ModuleScript', {'Attribute'}},
+                                {54, 'ModuleScript', {'New'}},
+                                {58, 'ModuleScript', {'applyInstanceProps'}},
+                                {57, 'ModuleScript', {'Out'}},
+                                {50, 'ModuleScript', {'AttributeOut'}},
+                                {56, 'ModuleScript', {'OnEvent'}},
+                                {53, 'ModuleScript', {'Hydrate'}}
+                            }},
+                            {89, 'ModuleScript', {'Types'}},
+                            {36, 'Folder', {'Colour'}, {
+                                {37, 'ModuleScript', {'Oklab'}},
+                                {38, 'ModuleScript', {'sRGB'}}
+                            }},
+                            {40, 'ModuleScript', {'ExternalDebug'}},
+                            {90, 'Folder', {'Utility'}, {
+                                {98, 'ModuleScript', {'xtypeof'}},
+                                {97, 'ModuleScript', {'nicknames'}},
+                                {96, 'ModuleScript', {'never'}},
+                                {94, 'ModuleScript', {'merge'}},
+                                {95, 'ModuleScript', {'nameOf'}},
+                                {92, 'ModuleScript', {'Safe'}},
+                                {91, 'ModuleScript', {'Contextual'}},
+                                {93, 'ModuleScript', {'isSimilar'}}
+                            }},
+                            {41, 'Folder', {'Graph'}, {
+                                {42, 'ModuleScript', {'Observer'}},
+                                {46, 'ModuleScript', {'evaluate'}},
+                                {43, 'ModuleScript', {'castToGraph'}},
+                                {44, 'ModuleScript', {'change'}},
+                                {45, 'ModuleScript', {'depend'}}
+                            }},
+                            {77, 'Folder', {'State'}, {
+                                {84, 'ModuleScript', {'ForValues'}},
+                                {83, 'ModuleScript', {'ForPairs'}},
+                                {85, 'ModuleScript', {'Value'}},
+                                {79, 'ModuleScript', {'For'}, {
+                                    {80, 'ModuleScript', {'Disassembly'}},
+                                    {81, 'ModuleScript', {'ForTypes'}}
+                                }},
+                                {82, 'ModuleScript', {'ForKeys'}},
+                                {86, 'ModuleScript', {'castToState'}},
+                                {78, 'ModuleScript', {'Computed'}},
+                                {88, 'ModuleScript', {'updateAll'}},
+                                {87, 'ModuleScript', {'peek'}}
+                            }},
+                            {60, 'Folder', {'Logging'}, {
+                                {62, 'ModuleScript', {'messages'}},
+                                {63, 'ModuleScript', {'parseError'}},
+                                {61, 'ModuleScript', {'formatError'}}
+                            }},
+                            {25, 'Folder', {'Animation'}, {
+                                {27, 'ModuleScript', {'Spring'}},
+                                {29, 'ModuleScript', {'Tween'}},
+                                {35, 'ModuleScript', {'unpackType'}},
+                                {26, 'ModuleScript', {'ExternalTime'}},
+                                {28, 'ModuleScript', {'Stopwatch'}},
+                                {34, 'ModuleScript', {'springCoefficients'}},
+                                {33, 'ModuleScript', {'packType'}},
+                                {30, 'ModuleScript', {'getTweenDuration'}},
+                                {32, 'ModuleScript', {'lerpType'}},
+                                {31, 'ModuleScript', {'getTweenRatio'}}
+                            }}
+                        }}
+                    }}
+                }}
+            }}
+        }},
+        {100, 'Folder', {'Storage'}, {
+            {104, 'Folder', {'Themes'}, {
+                {108, 'ModuleScript', {'Midnight'}},
+                {105, 'ModuleScript', {'Dark'}},
+                {109, 'ModuleScript', {'Rose'}},
+                {106, 'ModuleScript', {'Emerald'}},
+                {107, 'ModuleScript', {'Light'}}
+            }},
+            {102, 'Folder', {'Stories'}, {
+                {103, 'ModuleScript', {'App.story'}}
+            }},
+            {101, 'ModuleScript', {'Information'}}
+        }},
+        {110, 'Folder', {'Utilities'}, {
+            {114, 'ModuleScript', {'Transparency'}},
+            {111, 'ModuleScript', {'Animate'}},
+            {113, 'ModuleScript', {'Scoper'}},
+            {112, 'ModuleScript', {'Colors'}}
+        }}
+    }
+}
+
+local moduleImplementations = {
+    function()
+        local mainModule = require(moduleData[1][2])
+        return mainModule
+    end,
+    
+    -- Button Component
+    function()
+        local Holder = require(moduleData[4][2])
+        
+        type Configuration = {
+            Title: string,
+            Description: string,
+            Callback: () -> ()
+        }
+        
+        local function CreateButton(config: Configuration, theme)
+            local button = Holder({
+                Title = config.Title,
+                Description = config.Description,
+                Interactable = true,
+                Callback = function()
+                    config.Callback()
+                end
+            }, theme)
+            return button
+        end
+        
+        return CreateButton
+    end,
+    
+    -- ColorPicker Button Component
+    function()
+        local Holder = require(moduleData[5][2])
+        local ColorPickerPopup = require(moduleData[15][2])
+        local Colors = require(moduleData[112][2])
+        
+        type Configuration = {
+            Title: string,
+            Description: string,
+            Default: Color3,
+            Callback: (string) -> ()
+        }
+        
+        local function CreateColorPickerButton(config: Configuration, theme)
+            local currentColor = theme.Scope:Value(config.Default or Color3.fromRGB(255, 255, 255))
+            
+            local button = Holder({
+                Title = config.Title,
+                Description = config.Description,
+                Interactable = true,
+                Padding = 35,
+                Callback = function()
+                    ColorPickerPopup.new({
+                        Title = config.Title,
+                        Options = config.Options,
+                        Callback = function(newColor)
+                            currentColor:set(newColor)
+                            config.Callback(newColor)
+                        end
+                    }, theme, theme.Scope.Unwrap(currentColor):ToHSV())
+                end,
+                Children = {
+                    theme.Scope:New 'Frame' {
+                        Name = 'Info',
+                        AnchorPoint = Vector2.new(1, 0.5),
+                        Position = UDim2.new(1, 0, 0.5, 0),
+                        Size = UDim2.fromOffset(25, 25),
+                        BackgroundTransparency = 0,
+                        BackgroundColor3 = Colors(function(scope)
+                            return scope(currentColor)
+                        end, 30, 1),
+                        [theme.Scope.Children] = {
+                            theme.Scope:New 'UICorner' {
+                                CornerRadius = UDim.new(0, 8)
+                            },
+                            theme.Scope:New 'UIStroke' {
+                                BorderStrokePosition = Enum.BorderStrokePosition.Inner,
+                                Color = Color3.fromRGB(255, 255, 255),
+                                Transparency = 0.8,
+                                Thickness = 1.5
+                            }
+                        }
+                    }
+                }
+            }, theme)
+            
+            return button
+        end
+        
+        return CreateColorPickerButton
+    end,
+    
+    -- Dropdown Button Component
+    function()
+        local Holder = require(moduleData[6][2])
+        local DropdownPopup = require(moduleData[16][2])
+        
+        type Configuration = {
+            Title: string,
+            Description: string,
+            Options: {string},
+            Default: string,
+            Callback: (string) -> ()
+        }
+        
+        local function CreateDropdownButton(config: Configuration, theme)
+            local selectedValue = theme.Scope:Value(config.Default or 'None')
+            
+            local button = Holder({
+                Title = config.Title,
+                Description = config.Description,
+                Interactable = true,
+                Padding = 60,
+                Callback = function()
+                    DropdownPopup.new({
+                        Title = config.Title,
+                        Options = config.Options,
+                        Callback = function(newValue)
+                            selectedValue:set(newValue)
+                            config.Callback(newValue)
+                        end
+                    }, theme)
+                end,
+                Children = {
+                    theme.Scope:New 'Frame' {
+                        Name = 'Info',
+                        AnchorPoint = Vector2.new(1, 0),
+                        BackgroundColor3 = Color3.fromRGB(255, 255, 255),
+                        BackgroundTransparency = 1,
+                        Position = UDim2.new(1, 0, 0, 0),
+                        AutomaticSize = Enum.AutomaticSize.X,
+                        Size = UDim2.new(0, 0, 1, 0),
+                        [theme.Scope.Children] = {
+                            theme.Scope:New 'ImageLabel' {
+                                Name = 'Icon',
+                                LayoutOrder = 1,
+                                ScaleType = Enum.ScaleType.Crop,
+                                BackgroundColor3 = Color3.fromRGB(255, 255, 255),
+                                ImageRectOffset = Vector2.new(0, 514),
+                                Image = 'rbxassetid://16898617509',
+                                BackgroundTransparency = 1,
+                                ImageRectSize = Vector2.new(256, 256),
+                                ImageColor3 = theme.Themes.Text.Description.Color,
+                                Size = UDim2.new(0, 15, 0, 15)
+                            },
+                            theme.Scope:New 'UIListLayout' {
+                                Name = 'UIListLayout',
+                                VerticalAlignment = Enum.VerticalAlignment.Center,
+                                SortOrder = Enum.SortOrder.LayoutOrder,
+                                HorizontalAlignment = Enum.HorizontalAlignment.Right,
+                                Padding = UDim.new(0, 10),
+                                FillDirection = Enum.FillDirection.Horizontal
+                            },
+                            theme.Scope:New 'TextLabel' {
+                                Name = 'Selected',
+                                FontFace = Font.new('rbxassetid://12187365364', Enum.FontWeight.SemiBold, Enum.FontStyle.Normal),
+                                TextColor3 = theme.Themes.Text.Description.Color,
+                                Text = selectedValue,
+                                BackgroundColor3 = Color3.fromRGB(255, 255, 255),
+                                TextTransparency = 0,
+                                BackgroundTransparency = 1,
+                                RichText = true,
+                                TextSize = 12,
+                                AutomaticSize = Enum.AutomaticSize.X,
+                                Size = UDim2.new(0, 0, 0, 20),
+                                [theme.Scope.Children] = {
+                                    theme.Scope:New 'UIPadding' {
+                                        Name = 'UIPadding',
+                                        PaddingBottom = UDim.new(0, 1)
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }, theme)
+            
+            return button
+        end
+        
+        return CreateDropdownButton
+    end,
+    
+    -- Holder Component (Base for all interactive elements)
+    function()
+        local Fusion = require(moduleData[7][2])
+        local Scoper = require(moduleData[113][2])
+        local Animate = require(moduleData[111][2])
+        local Colors = require(moduleData[112][2])
+        
+        type Configuration = {
+            Title: string,
+            Description: string,
+            Interactable: boolean,
+            Padding: number?,
+            Children: {GuiObject},
+            Callback: () -> ()
+        }
+        
+        local function CreateHolder(config: Configuration, theme)
+            local isHovered = theme.Scope:Value(false)
+            local isPressed = theme.Scope:Value(false)
+            local componentTheme = theme.Themes.Component
+            local titleText = theme.Scope:Value(config.Title)
+            local descriptionText = theme.Scope:Value(config.Description)
+            
+            local holderButton = theme.Scope:New 'TextButton' {
+                Name = 'Holder',
+                BackgroundColor3 = Color3.fromRGB(255, 255, 255),
+                Size = UDim2.new(1, -15, 0, 45),
+                AutomaticSize = Enum.AutomaticSize.Y,
+                [Fusion.OnEvent 'MouseEnter'] = function()
+                    isHovered:set(true)
+                end,
+                [Fusion.OnEvent 'MouseLeave'] = function()
+                    isHovered:set(false)
+                    isPressed:set(false)
+                end,
+                [Fusion.OnEvent 'MouseButton1Down'] = function()
+                    if Scoper.Unwrap(isHovered) then
+                        isPressed:set(true)
+                    end
+                end,
+                [Fusion.OnEvent 'MouseButton1Up'] = function()
+                    isPressed:set(false)
+                end,
+                [Fusion.OnEvent 'MouseButton1Click'] = function()
+                    if config.Interactable and config.Callback then
+                        config.Callback()
+                    end
+                end,
+                [Fusion.Children] = {
+                    theme.Scope:New 'UIGradient' {
+                        Name = 'UIGradient',
+                        Rotation = componentTheme.Rotation,
+                        Color = Colors.SetupTheme(componentTheme.Color)
+                    },
+                    theme.Scope:New 'UICorner' {
+                        Name = 'UICorner',
+                        CornerRadius = UDim.new(0, 10)
+                    },
+                    theme.Scope:New 'Frame' {
+                        Name = 'Highlight',
+                        Size = UDim2.fromScale(1, 1) + UDim2.fromOffset(20, 0),
+                        Position = UDim2.fromOffset(-10, 0),
+                        BackgroundColor3 = Colors(function(scope)
+                            local mode = scope(theme.Themes.Mode)
+                            return (mode == 'Light' and Color3.fromRGB(100, 100, 100)) or Color3.fromRGB(255, 255, 255)
+                        end, 30, 1),
+                        BackgroundTransparency = Colors(function(scope)
+                            if config.Interactable then
+                                local pressed = scope(isPressed)
+                                local hovered = scope(isHovered)
+                                return (pressed and 0.95) or (hovered and 0.975) or 1
+                            else
+                                return 1
+                            end
+                        end, 30, 1),
+                        [Fusion.Children] = {
+                            theme.Scope:New 'UICorner' {
+                                Name = 'UICorner',
+                                CornerRadius = UDim.new(0, 10)
+                            }
+                        }
+                    },
+                    theme.Scope:New 'UIStroke' {
+                        Name = 'UIStroke',
+                        Thickness = 0.7,
+                        Transparency = 0.95
+                    },
+                    theme.Scope:New 'Frame' {
+                        Name = 'Text',
+                        Size = UDim2.fromScale(1, 1),
+                        BackgroundTransparency = 1,
+                        AutomaticSize = Enum.AutomaticSize.Y,
+                        [Fusion.Children] = {
+                            theme.Scope:New 'UIListLayout' {
+                                Name = 'UIListLayout',
+                                VerticalAlignment = Enum.VerticalAlignment.Center,
+                                SortOrder = Enum.SortOrder.LayoutOrder
+                            },
+                            theme.Scope:New 'UIPadding' {
+                                PaddingTop = UDim.new(0, 10),
+                                PaddingBottom = UDim.new(0, 10)
+                            },
+                            theme.Scope:New 'TextLabel' {
+                                Name = 'Title',
+                                FontFace = Font.new('rbxassetid://12187365364', Enum.FontWeight.Bold, Enum.FontStyle.Normal),
+                                TextColor3 = theme.Themes.Text.Title.Color,
+                                BackgroundTransparency = 1,
+                                Size = UDim2.new(1, -(config.Padding or 0), 0, 0),
+                                TextSize = 13,
+                                TextWrapped = true,
+                                TextXAlignment = Enum.TextXAlignment.Left,
+                                AutomaticSize = Enum.AutomaticSize.Y,
+                                BackgroundColor3 = Color3.fromRGB(255, 255, 255),
+                                Text = Fusion.Computed(function(scope)
+                                    return (scope(titleText) or '')
+                                end),
+                                Visible = Fusion.Computed(function(scope)
+                                    local text = scope(titleText)
+                                    return (text and true) or false
+                                end)
+                            },
+                            theme.Scope:New 'TextLabel' {
+                                Name = 'Description',
+                                LayoutOrder = 1,
+                                FontFace = Font.new('rbxassetid://12187365364', Enum.FontWeight.Medium, Enum.FontStyle.Normal),
+                                TextColor3 = theme.Themes.Text.Description.Color,
+                                BackgroundTransparency = 1,
+                                Size = UDim2.new(1, -(config.Padding or 0), 0, 0),
+                                TextSize = 12,
+                                TextWrapped = true,
+                                TextXAlignment = Enum.TextXAlignment.Left,
+                                AutomaticSize = Enum.AutomaticSize.Y,
+                                BackgroundColor3 = Color3.fromRGB(255, 255, 255),
+                                Text = Fusion.Computed(function(scope)
+                                    return (scope(descriptionText) or '')
+                                end),
+                                Visible = Fusion.Computed(function(scope)
+                                    local text = scope(descriptionText)
+                                    return (text and true) or false
+                                end)
+                            }
+                        }
+                    },
+                    theme.Scope:New 'UIStroke' {
+                        Name = 'UIStroke',
+                        Thickness = 2,
+                        Transparency = 0.7,
+                        Color = Color3.fromRGB(255, 255, 255),
+                        BorderStrokePosition = Enum.BorderStrokePosition.Inner
+                    },
+                    theme.Scope:New 'UIPadding' {
+                        Name = 'UIPadding',
+                        PaddingLeft = UDim.new(0, 10),
+                        PaddingRight = UDim.new(0, 10)
+                    },
+                    config.Children
+                }
+            }
+            
+            local holderObject = {
+                Object = holderButton
+            }
+            
+            function holderObject:SetTitle(newTitle: string)
+                titleText:set(newTitle)
+            end
+            
+            function holderObject:SetDescription(newDescription: string)
+                descriptionText:set(newDescription)
+            end
+            
+            return holderObject
+        end
+        
+        return CreateHolder
+    end,
+    
+    -- Input Component
+    function()
+        local Holder = require(moduleData[8][2])
+        local Fusion = require(moduleData[9][2])
+        local Scoper = require(moduleData[113][2])
+        
+        type Configuration = {
+            Title: string,
+            Description: string,
+            DefaultText: string,
+            Placeholder: string,
+            Callback: (string) -> ()
+        }
+        
+        local function CreateInput(config: Configuration, theme)
+            local textBoxValue = theme.Scope:Value()
+            
+            local input = Holder({
+                Title = config.Title,
+                Description = config.Description,
+                Interactable = true,
+                Padding = 100,
+                Callback = function()
+                    Scoper.Unwrap(textBoxValue):CaptureFocus()
+                end,
+                Children = {
+                    textBoxValue:set(theme.Scope:New 'TextBox' {
+                        Name = 'Toggle',
+                        BackgroundColor3 = theme.Themes.Controls.Color,
+                        FontFace = Font.new('rbxassetid://12187365364', Enum.FontWeight.Bold, Enum.FontStyle.Normal),
+                        Active = false,
+                        Text = (config.DefaultText or ''),
+                        AutomaticSize = Enum.AutomaticSize.X,
+                        Selectable = false,
+                        AnchorPoint = Vector2.new(1, 0.5),
+                        Position = UDim2.new(1, 0, 0.5, 0),
+                        PlaceholderColor3 = theme.Themes.Text.Description.Color,
+                        TextColor3 = theme.Themes.Text.Title.Color,
+                        PlaceholderText = (config.Placeholder or ''),
+                        TextSize = 12,
+                        Size = UDim2.new(0, 22, 0, 22),
+                        [Fusion.OnEvent 'FocusLost'] = function()
+                            config.Callback(Scoper.Unwrap(textBoxValue).Text)
+                        end,
+                        [Fusion.Children] = {
+                            theme.Scope:New 'UIPadding' {
+                                Name = 'UIPadding',
+                                PaddingLeft = UDim.new(0, 5),
+                                PaddingRight = UDim.new(0, 5)
+                            },
+                            theme.Scope:New 'UICorner' {
+                                Name = 'UICorner',
+                                CornerRadius = UDim.new(0, 6)
+                            },
+                            theme.Scope:New 'UIStroke' {
+                                Name = 'UIStroke',
+                                ApplyStrokeMode = Enum.ApplyStrokeMode.Border,
+                                Color = theme.Themes.Controls.Outline,
+                                Transparency = 0
+                            }
+                        }
+                    })
+                }
+            }, theme)
+            
+            return input
+        end
+        
+        return CreateInput
+    end,
+    
+    -- Keybind Component
+    function()
+        local UserInputService = game:GetService('UserInputService')
+        local Holder = require(moduleData[9][2])
+        local Fusion = require(moduleData[10][2])
+        local Scoper = require(moduleData[113][2])
+        
+        type Configuration = {
+            Title: string,
+            Description: string,
+            DefaultKeybind: string,
+            Callback: (Enum.KeyCode | Enum.UserInputType) -> ()
+        }
+        
+        local function CreateKeybind(config: Configuration, theme)
+            local defaultKeybind = (config.DefaultKeybind or 'None')
+            local currentKeybind = theme.Scope:Value(defaultKeybind)
+            
+            local keybind = Holder({
+                Title = config.Title,
+                Description = config.Description,
+                Interactable = true,
+                Padding = 90,
+                Callback = function()
+                    currentKeybind:set('press a key')
+                    UserInputService.InputBegan:Once(function(input, gameProcessed)
+                        if not gameProcessed then
+                            local inputType, keyCode = input.UserInputType, input.KeyCode
+                            if inputType == Enum.UserInputType.Keyboard then
+                                currentKeybind:set(keyCode.Name)
+                                config.Callback(keyCode)
+                            else
+                                currentKeybind:set(inputType.Name)
+                                config.Callback(inputType)
+                            end
+                        end
+                    end)
+                end,
+                Children = {
+                    theme.Scope:New 'Frame' {
+                        Name = 'Info',
+                        AnchorPoint = Vector2.new(1, 0),
+                        BackgroundColor3 = Color3.fromRGB(255, 255, 255),
+                        BackgroundTransparency = 1,
+                        Position = UDim2.new(1, 0, 0, 0),
+                        AutomaticSize = Enum.AutomaticSize.X,
+                        Size = UDim2.new(0, 0, 1, 0),
+                        [Fusion.Children] = {
+                            theme.Scope:New 'ImageLabel' {
+                                Name = 'Icon',
+                                LayoutOrder = 1,
+                                ScaleType = Enum.ScaleType.Crop,
+                                BackgroundColor3 = Color3.fromRGB(255, 255, 255),
+                                ImageRectOffset = Vector2.new(257, 0),
+                                Image = 'rbxassetid://16898673794',
+                                BackgroundTransparency = 1,
+                                ImageRectSize = Vector2.new(256, 256),
+                                ImageColor3 = theme.Themes.Text.Description.Color,
+                                Size = UDim2.new(0, 15, 0, 15)
+                            },
+                            theme.Scope:New 'TextLabel' {
+                                Name = 'Selected',
+                                FontFace = Font.new('rbxassetid://12187365364', Enum.FontWeight.ExtraBold, Enum.FontStyle.Normal),
+                                TextColor3 = theme.Themes.Text.Description.Color,
+                                Text = currentKeybind,
+                                BackgroundColor3 = Color3.fromRGB(255, 255, 255),
+                                BackgroundTransparency = 1,
+                                TextSize = 12,
+                                RichText = true,
+                                AutomaticSize = Enum.AutomaticSize.X,
+                                Size = UDim2.new(0, 0, 0, 20),
+                                [Fusion.Children] = {
+                                    theme.Scope:New 'UIPadding' {
+                                        Name = 'UIPadding',
+                                        PaddingBottom = UDim.new(0, 1)
+                                    }
+                                }
+                            },
+                            theme.Scope:New 'UIListLayout' {
+                                Name = 'UIListLayout',
+                                VerticalAlignment = Enum.VerticalAlignment.Center,
+                                SortOrder = Enum.SortOrder.LayoutOrder,
+                                HorizontalAlignment = Enum.HorizontalAlignment.Right,
+                                Padding = UDim.new(0, 10),
+                                FillDirection = Enum.FillDirection.Horizontal
+                            }
+                        }
+                    }
+                }
+            }, theme)
+            
+            return keybind
+        end
+        
+        return CreateKeybind
+    end,
+    
+    -- MultiDropdown Component
+    function()
+        local Holder = require(moduleData[10][2])
+        local DropdownPopup = require(moduleData[16][2])
+        
+        type Configuration = {
+            Title: string,
+            Description: string,
+            Options: {string},
+            Default: {string},
+            Callback: ({string}) -> ()
+        }
+        
+        local function CreateMultiDropdown(config: Configuration, theme)
+            local selectedValues = theme.Scope:Value(config.Default or {'None'})
+            
+            local dropdown = Holder({
+                Title = config.Title,
+                Description = config.Description,
+                Interactable = true,
+                Padding = 80,
+                Callback = function()
+                    DropdownPopup.new({
+                        Title = config.Title,
+                        Options = config.Options,
+                        MultiDropdown = true,
+                        CurrentOptions = Scoper.Unwrap(selectedValues),
+                        Callback = function(newValues)
+                            selectedValues:set(newValues)
+                            config.Callback(newValues)
+                        end
+                    }, theme)
+                end,
+                Children = {
+                    theme.Scope:New 'Frame' {
+                        Name = 'Info',
+                        AnchorPoint = Vector2.new(1, 0),
+                        BackgroundColor3 = Color3.fromRGB(255, 255, 255),
+                        BackgroundTransparency = 1,
+                        Position = UDim2.new(1, 0, 0, 0),
+                        AutomaticSize = Enum.AutomaticSize.X,
+                        Size = UDim2.new(0, 0, 1, 0),
+                        [Fusion.Children] = {
+                            theme.Scope:New 'ImageLabel' {
+                                Name = 'Icon',
+                                LayoutOrder = 1,
+                                ScaleType = Enum.ScaleType.Crop,
+                                BackgroundColor3 = Color3.fromRGB(255, 255, 255),
+                                ImageRectOffset = Vector2.new(0, 514),
+                                Image = 'rbxassetid://16898617509',
+                                BackgroundTransparency = 1,
+                                ImageRectSize = Vector2.new(256, 256),
+                                ImageColor3 = theme.Themes.Text.Description.Color,
+                                Size = UDim2.new(0, 15, 0, 15)
+                            },
+                            theme.Scope:New 'UIListLayout' {
+                                Name = 'UIListLayout',
+                                VerticalAlignment = Enum.VerticalAlignment.Center,
+                                SortOrder = Enum.SortOrder.LayoutOrder,
+                                HorizontalAlignment = Enum.HorizontalAlignment.Right,
+                                Padding = UDim.new(0, 10),
+                                FillDirection = Enum.FillDirection.Horizontal
+                            },
+                            theme.Scope:New 'TextLabel' {
+                                Name = 'Selected',
+                                FontFace = Font.new('rbxassetid://12187365364', Enum.FontWeight.SemiBold, Enum.FontStyle.Normal),
+                                TextColor3 = theme.Themes.Text.Description.Color,
+                                Text = theme.Scope:Computed(function(scope)
+                                    local values = scope(selectedValues) or {'None'}
+                                    return table.concat(values, ', ')
+                                end),
+                                BackgroundColor3 = Color3.fromRGB(255, 255, 255),
+                                TextTransparency = 0,
+                                BackgroundTransparency = 1,
+                                RichText = true,
+                                TextSize = 12,
+                                AutomaticSize = Enum.AutomaticSize.X,
+                                Size = UDim2.new(0, 0, 0, 20),
+                                [Fusion.Children] = {
+                                    theme.Scope:New 'UIPadding' {
+                                        Name = 'UIPadding',
+                                        PaddingBottom = UDim.new(0, 1)
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }, theme)
+            
+            return dropdown
+        end
+        
+        return CreateMultiDropdown
+    end,
+    
+    -- Slider Component
+    function()
+        local RunService = game:GetService('RunService')
+        local Players = game:GetService('Players')
+        local Holder = require(moduleData[11][2])
+        local Fusion = require(moduleData[12][2])
+        local Scoper = require(moduleData[113][2])
+        local Animate = require(moduleData[111][2])
+        local Mouse = Players.LocalPlayer:GetMouse()
+        
+        type Configuration = {
+            Title: string,
+            Description: string,
+            Default: string,
+            Maximum: number,
+            Minimum: number,
+            DecimalCount: number?,
+            Callback: (number) -> ()
+        }
+        
+        local function CreateSlider(config: Configuration, theme)
+            local sliderFrame = theme.Scope:Value()
+            local selectedTextBox = theme.Scope:Value()
+            local isDragging = theme.Scope:Value(false)
+            local sliderProgress = theme.Scope:Value(0)
+            local currentValue = theme.Scope:Value(0)
+            local decimalCount = (config.DecimalCount or 0)
+            
+            local slider = Holder({
+                Title = config.Title,
+                Description = config.Description,
+                Padding = 150,
+                Children = {
+                    theme.Scope:New 'Frame' {
+                        Name = 'Slider',
+                        AnchorPoint = Vector2.new(1, 0),
+                        BackgroundTransparency = 1,
+                        Position = UDim2.new(1, 0, 0, 0),
+                        BackgroundColor3 = Color3.fromRGB(255, 255, 255),
+                        Size = UDim2.new(0.5, 0, 1, 0),
+                        [Fusion.Children] = {
+                            selectedTextBox:set(theme.Scope:New 'TextBox' {
+                                Name = 'Selected',
+                                FontFace = Font.new('rbxassetid://12187365364', Enum.FontWeight.Heavy, Enum.FontStyle.Normal),
+                                TextColor3 = theme.Themes.Text.Title.Color,
+                                TextSize = 12,
+                                BackgroundTransparency = 1,
+                                RichText = true,
+                                TextTransparency = 0.25,
+                                Size = UDim2.new(0, 0, 0, 20),
+                                AutomaticSize = Enum.AutomaticSize.X,
+                                Text = Fusion.Computed(function(scope)
+                                    return tostring(scope(currentValue))
+                                end),
+                                [Fusion.OnEvent 'FocusLost'] = function()
+                                    local newValue = tonumber(Scoper.Unwrap(selectedTextBox).Text)
+                                    updateSlider(newValue)
+                                    config.Callback(newValue)
+                                end,
+                                [Fusion.Children] = {
+                                    theme.Scope:New 'UIPadding' {
+                                        Name = 'UIPadding',
+                                        PaddingBottom = UDim.new(0, 1)
+                                    }
+                                }
+                            }),
+                            theme.Scope:New 'Frame' {
+                                Name = 'Slide',
+                                AnchorPoint = Vector2.new(1, 0.5),
+                                BackgroundColor3 = theme.Themes.Controls.Color,
+                                Position = UDim2.new(1, 0, 0.5, 0),
+                                LayoutOrder = 1,
+                                Size = UDim2.new(0, 100, 0, 7),
+                                [Fusion.Children] = {
+                                    sliderFrame:set(theme.Scope:New 'TextButton' {
+                                        Size = UDim2.new(1, 0, 0, 25),
+                                        Position = UDim2.fromScale(0.5, 0.5),
+                                        AnchorPoint = Vector2.new(0.5, 0.5),
+                                        ZIndex = 5,
+                                        BackgroundTransparency = 1,
+                                        [Fusion.OnEvent 'MouseButton1Down'] = function()
+                                            isDragging:set(true)
+                                        end,
+                                        [Fusion.OnEvent 'MouseButton1Up'] = function()
+                                            isDragging:set(false)
+                                            config.Callback(Scoper.Unwrap(currentValue))
+                                        end,
+                                        [Fusion.OnEvent 'MouseLeave'] = function()
+                                            isDragging:set(false)
+                                            config.Callback(Scoper.Unwrap(currentValue))
+                                        end
+                                    }),
+                                    theme.Scope:New 'UIStroke' {
+                                        Name = 'UIStroke',
+                                        Thickness = 0.5,
+                                        Color = theme.Themes.Controls.Outline,
+                                        Transparency = 0
+                                    },
+                                    theme.Scope:New 'UICorner' {
+                                        Name = 'UICorner',
+                                        CornerRadius = UDim.new(1, 0)
+                                    },
+                                    theme.Scope:New 'Frame' {
+                                        Name = 'Highlight',
+                                        BackgroundColor3 = theme.Themes.Accent,
+                                        Size = Animate(function(scope)
+                                            return UDim2.fromScale(scope(sliderProgress) or 0, 1)
+                                        end, 100, 1),
+                                        [Fusion.Children] = {
+                                            theme.Scope:New 'UICorner' {
+                                                Name = 'UICorner',
+                                                CornerRadius = UDim.new(1, 0)
+                                            },
+                                            theme.Scope:New 'UIStroke' {
+                                                Name = 'UIStroke',
+                                                ApplyStrokeMode = Enum.ApplyStrokeMode.Border,
+                                                Transparency = 0.8,
+                                                Color = Color3.fromRGB(255, 255, 255),
+                                                BorderStrokePosition = Enum.BorderStrokePosition.Inner
+                                            },
+                                            theme.Scope:New 'Frame' {
+                                                Name = 'Circle',
+                                                AnchorPoint = Vector2.new(0.5, 0.5),
+                                                BackgroundColor3 = Color3.fromRGB(245, 245, 245),
+                                                Position = UDim2.new(1, 0, 0.5, 0),
+                                                Size = UDim2.new(0, 20, 0, 15),
+                                                BackgroundTransparency = 0.1,
+                                                [Fusion.Children] = {
+                                                    theme.Scope:New 'UIStroke' {
+                                                        Name = 'UIStroke',
+                                                        ApplyStrokeMode = Enum.ApplyStrokeMode.Border,
+                                                        Transparency = 0.8,
+                                                        Color = Color3.fromRGB(255, 255, 255),
+                                                        BorderStrokePosition = Enum.BorderStrokePosition.Inner
+                                                    },
+                                                    theme.Scope:New 'UIStroke' {
+                                                        Name = 'UIStroke',
+                                                        ApplyStrokeMode = Enum.ApplyStrokeMode.Border,
+                                                        Transparency = 0.95
+                                                    },
+                                                    theme.Scope:New 'UICorner' {
+                                                        Name = 'UICorner',
+                                                        CornerRadius = UDim.new(1, 0)
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            },
+                            theme.Scope:New 'UIListLayout' {
+                                Name = 'UIListLayout',
+                                VerticalAlignment = Enum.VerticalAlignment.Center,
+                                FillDirection = Enum.FillDirection.Horizontal,
+                                HorizontalAlignment = Enum.HorizontalAlignment.Right,
+                                Padding = UDim.new(0, 15),
+                                SortOrder = Enum.SortOrder.LayoutOrder
+                            }
+                        }
+                    }
+                }
+            }, theme)
+            
+            local function updateSlider(value)
+                local sliderButton = Scoper.Unwrap(sliderFrame)
+                if sliderButton then
+                    local normalizedValue = math.clamp((Mouse.X - sliderButton.AbsolutePosition.X) / sliderButton.AbsoluteSize.X, 0, 1)
+                    local clampedValue = math.clamp(value or (normalizedValue * config.Maximum), config.Minimum, config.Maximum)
+                    currentValue:set(tonumber(string.format('%.<decimalCount>f', clampedValue)))
+                    sliderProgress:set(math.clamp((value and value / config.Maximum) or normalizedValue, 0, 1))
+                end
+            end
+            
+            if config.Default then
+                updateSlider(config.Default)
+            end
+            
+            theme.Scope.Observer(isDragging):onChange(function()
+                local dragging = Scoper.Unwrap(isDragging)
+                if dragging then
+                    local connection
+                    connection = RunService.RenderStepped:Connect(function()
+                        updateSlider()
+                    end)
+                    table.insert(theme.Scope, connection)
+                end
+            end)
+            
+            return slider
+        end
+        
+        return CreateSlider
+    end,
+    
+    -- Title Component
+    function()
+        local Fusion = require(moduleData[12][2])
+        
+        type Configuration = {
+            Title: string
+        }
+        
+        local function CreateTitle(config: Configuration, theme)
+            local titleLabel = theme.Scope:New 'TextLabel' {
+                Name = 'Title',
+                FontFace = Font.new('rbxassetid://12187365364', Enum.FontWeight.Bold, Enum.FontStyle.Normal),
+                TextColor3 = theme.Themes.Text.Title.Color,
+                Text = config.Title,
+                BackgroundTransparency = 1,
+                TextXAlignment = Enum.TextXAlignment.Left,
+                BackgroundColor3 = Color3.fromRGB(255, 255, 255),
+                TextSize = 14,
+                Size = UDim2.new(1, -30, 0, 25),
+                [Fusion.Children] = {
+                    theme.Scope:New 'Frame' {
+                        Name = 'Seperator',
+                        AnchorPoint = Vector2.new(0.5, 0),
+                        BackgroundColor3 = theme.Themes.Text.Title.Color,
+                        BackgroundTransparency = 0.9,
+                        Position = UDim2.new(0.5, 0, 1, 0),
+                        Size = UDim2.new(1, 10, 0.05, 0)
+                    }
+                }
+            }
+            
+            return {
+                Object = titleLabel
+            }
+        end
+        
+        return CreateTitle
+    end,
+    
+    -- Toggle Component
+    function()
+        local Holder = require(moduleData[13][2])
+        local Fusion = require(moduleData[13][2])
+        local Scoper = require(moduleData[113][2])
+        local Animate = require(moduleData[111][2])
+        local Colors = require(moduleData[112][2])
+        
+        type Configuration = {
+            Title: string,
+            Description: string,
+            DefaultValue: boolean,
+            Callback: (boolean) -> ()
+        }
+        
+        local function CreateToggle(config: Configuration, theme)
+            local toggleValue = theme.Scope:Value(config.DefaultValue)
+            
+            local toggle = Holder({
+                Title = config.Title,
+                Description = config.Description,
+                Interactable = true,
+                Padding = 45,
+                Callback = function()
+                    local newValue = not Scoper.Unwrap(toggleValue)
+                    toggleValue:set(newValue)
+                    config.Callback(newValue)
+                end,
+                Children = {
+                    theme.Scope:New 'Frame' {
+                        Name = 'Toggle',
+                        AnchorPoint = Vector2.new(1, 0.5),
+                        Position = UDim2.new(1, 0, 0.5, 0),
+                        Size = UDim2.new(0, 42, 0, 22),
+                        BackgroundColor3 = Colors(function(scope)
+                            local value = scope(toggleValue)
+                            local accent = scope(theme.Themes.Accent)
+                            local controlColor = scope(theme.Themes.Controls.Color)
+                            return (value and accent) or controlColor
+                        end, 30, 1),
+                        [Fusion.Children] = {
+                            theme.Scope:New 'UIStroke' {
+                                Name = 'UIStroke',
+                                ApplyStrokeMode = Enum.ApplyStrokeMode.Border,
+                                Color = Color3.fromRGB(255, 255, 255),
+                                BorderStrokePosition = Enum.BorderStrokePosition.Inner,
+                                Transparency = Colors(function(scope)
+                                    local value = scope(toggleValue)
+                                    return (value and 0.8) or 1
+                                end, 30, 1)
+                            },
+                            theme.Scope:New 'UIStroke' {
+                                Name = 'UIStroke',
+                                ApplyStrokeMode = Enum.ApplyStrokeMode.Border,
+                                Color = theme.Themes.Controls.Outline,
+                                Transparency = 0
+                            },
+                            theme.Scope:New 'UICorner' {
+                                Name = 'UICorner',
+                                CornerRadius = UDim.new(1, 0)
+                            },
+                            theme.Scope:New 'Frame' {
+                                Name = 'Circle',
+                                BackgroundColor3 = Color3.fromRGB(255, 255, 255),
+                                Size = UDim2.new(0.5, 0, 1, -6),
+                                BackgroundTransparency = 0.15,
+                                Position = Colors(function(scope)
+                                    local value = scope(toggleValue)
+                                    return (value and UDim2.new(1, -3, 0.5, 0)) or UDim2.new(0, 3, 0.5, 0)
+                                end, 30, 0.95),
+                                AnchorPoint = Colors(function(scope)
+                                    local value = scope(toggleValue)
+                                    return (value and Vector2.new(1, 0.5)) or Vector2.new(0, 0.5)
+                                end, 30, 1),
+                                [Fusion.Children] = {
+                                    theme.Scope:New 'UICorner' {
+                                        Name = 'UICorner',
+                                        CornerRadius = UDim.new(1, 0)
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }, theme)
+            
+            return toggle
+        end
+        
+        return CreateToggle
+    end,
+    
+    -- ColorPicker Popup
+    function()
+        local UserInputService = game:GetService('UserInputService')
+        local Holder = require(moduleData[15][2])
+        local Fusion = require(moduleData[15][2])
+        local Scoper = require(moduleData[113][2])
+        local Animate = require(moduleData[111][2])
+        local Transparency = require(moduleData[114][2])
+        local Colors = require(moduleData[112][2])
+        
+        type Configuration = {
+            Callback: (Color3) -> ()
+        }
+        
+        local ColorPicker = {}
+        
+        function ColorPicker.new(config: Configuration, theme, hsvValues)
+            local scope = theme.Scope:innerScope({})
+            local isOpen = scope:Value(false)
+            local currentHue, currentSaturation, currentValue = (hsvValues or {1, 1, 1})
+            local selectedColor = Color3.fromHSV(currentHue, currentSaturation, currentValue)
+            local colorPickerObject, colorComponents = nil, {}
+            
+            local function updateColorDisplay()
+                local color = Color3.fromHSV(currentHue, currentSaturation, currentValue)
+                selectedColor = color
+                local r, g, b = color.R * 255, color.G * 255, color.B * 255
+                
+                -- Update color display
+                colorComponents.Display.BackgroundColor3 = color
+                colorComponents.ValueFrame.BackgroundColor3 = Color3.fromHSV(currentHue, currentSaturation, 1)
+                
+                -- Update hex text
+                colorComponents.HexText.Text = string.format('#%02X%02X%02X', r, g, b)
+                
+                -- Update RGB inputs
+                colorComponents.RInput.Text = math.floor(r)
+                colorComponents.GInput.Text = math.floor(g)
+                colorComponents.BInput.Text = math.floor(b)
+                
+                -- Update pointers
+                colorComponents.HueSaturationPointer.Position = UDim2.new(currentHue, 0, 1 - currentSaturation, 0) - UDim2.fromOffset(
+                    colorComponents.HueSaturationPointer.AbsoluteSize.X / 2, 0
+                )
+                colorComponents.ValuePointer.Position = UDim2.new(currentValue, 0, 0.5, 0) - UDim2.fromOffset(
+                    colorComponents.ValuePointer.AbsoluteSize.X / 2, 0
+                )
+            end
+            
+            local function setupInputHandlers()
+                -- Hue/Saturation picker
+                local function onHueSaturationInput(inputPosition)
+                    local x = math.clamp((inputPosition.X - colorComponents.HueSaturationFrame.AbsolutePosition.X) / colorComponents.HueSaturationFrame.AbsoluteSize.X, 0, 1)
+                    local y = math.clamp((inputPosition.Y - colorComponents.HueSaturationFrame.AbsolutePosition.Y) / colorComponents.HueSaturationFrame.AbsoluteSize.Y, 0, 1)
+                    currentHue = x
+                    currentSaturation = 1 - y
+                    updateColorDisplay()
+                end
+                
+                colorComponents.HueSaturationFrame.InputBegan:Connect(function(input)
+                    if input.UserInputType == Enum.UserInputType.MouseButton1 then
+                        local changedConnection, endedConnection
+                        changedConnection = UserInputService.InputChanged:Connect(function(changedInput)
+                            if changedInput.UserInputType == Enum.UserInputType.MouseMovement then
+                                onHueSaturationInput(changedInput.Position)
+                            end
+                        end)
+                        endedConnection = UserInputService.InputEnded:Connect(function(endedInput)
+                            if endedInput.UserInputType == Enum.UserInputType.MouseButton1 then
+                                changedConnection:Disconnect()
+                                endedConnection:Disconnect()
+                            end
+                        end)
+                        onHueSaturationInput(input.Position)
+                    end
+                end)
+                
+                -- Value slider
+                local function onValueInput(inputPosition)
+                    local x = math.clamp((inputPosition.X - colorComponents.ValueFrame.AbsolutePosition.X) / colorComponents.ValueFrame.AbsoluteSize.X, 0, 1)
+                    currentValue = x
+                    updateColorDisplay()
+                end
+                
+                colorComponents.ValueFrame.InputBegan:Connect(function(input)
+                    if input.UserInputType == Enum.UserInputType.MouseButton1 then
+                        local changedConnection, endedConnection
+                        changedConnection = UserInputService.InputChanged:Connect(function(changedInput)
+                            if changedInput.UserInputType == Enum.UserInputType.MouseMovement then
+                                onValueInput(changedInput.Position)
+                            end
+                        end)
+                        endedConnection = UserInputService.InputEnded:Connect(function(endedInput)
+                            if endedInput.UserInputType == Enum.UserInputType.MouseButton1 then
+                                changedConnection:Disconnect()
+                                endedConnection:Disconnect()
+                            end
+                        end)
+                        onValueInput(input.Position)
+                    end
+                end)
+                
+                -- Hex input
+                colorComponents.HexText.FocusLost:Connect(function()
+                    local hex = colorComponents.HexText.Text:gsub('#', '')
+                    if #hex == 6 then
+                        local r = tonumber(hex:sub(1, 2), 16)
+                        local g = tonumber(hex:sub(3, 4), 16)
+                        local b = tonumber(hex:sub(5, 6), 16)
+                        if r and g and b then
+                            local h, s, v = Color3.fromRGB(r, g, b):ToHSV()
+                            currentHue, currentSaturation, currentValue = h, s, v
+                            updateColorDisplay()
+                        end
+                    end
+                end)
+                
+                -- RGB inputs
+                for color, input in pairs({R = colorComponents.RInput, G = colorComponents.GInput, B = colorComponents.BInput}) do
+                    input.FocusLost:Connect(function()
+                        local r = tonumber(colorComponents.RInput.Text) or 0
+                        local g = tonumber(colorComponents.GInput.Text) or 0
+                        local b = tonumber(colorComponents.BInput.Text) or 0
+                        r = math.clamp(r, 0, 255)
+                        g = math.clamp(g, 0, 255)
+                        b = math.clamp(b, 0, 255)
+                        local h, s, v = Color3.fromRGB(r, g, b):ToHSV()
+                        currentHue, currentSaturation, currentValue = h, s, v
+                        updateColorDisplay()
+                    end)
+                end
+            end
+            
+            -- Create color picker UI
+            colorPickerObject = scope:New 'Frame' {
+                Name = 'ColorPicker',
+                AnchorPoint = Vector2.new(0.5, 0.5),
+                Position = UDim2.new(0.5, 0, 0.5, 0),
+                BackgroundColor3 = Color3.fromRGB(255, 255, 255),
+                ZIndex = 11,
+                Parent = theme.Object,
+                Size = Transparency(function(scope)
+                    local open = scope(isOpen)
+                    local scale = (open and 0.75) or 0.7
+                    return UDim2.fromScale(scale, scale)
+                end, 25, 0.7, scope),
+                [Fusion.Children] = {
+                    scope:New 'UIPadding' {
+                        Name = 'UIPadding',
+                        PaddingTop = UDim.new(0, 10),
+                        PaddingBottom = UDim.new(0, 10),
+                        PaddingLeft = UDim.new(0, 10),
+                        PaddingRight = UDim.new(0, 10)
+                    },
+                    scope:New 'UIListLayout' {
+                        Name = 'UIListLayout',
+                        SortOrder = Enum.SortOrder.LayoutOrder,
+                        HorizontalAlignment = Enum.HorizontalAlignment.Center,
+                        Padding = UDim.new(0, 8)
+                    },
+                    scope:New 'UIAspectRatioConstraint' {
+                        Name = 'UIAspectRatioConstraint',
+                        AspectRatio = 0.9
+                    },
+                    scope:New 'ImageLabel' {
+                        Name = 'HueSaturationFrame',
+                        LayoutOrder = 0,
+                        AnchorPoint = Vector2.new(0.5, 0),
+                        Image = 'http://www.roblox.com/asset/?id=181615068',
+                        BackgroundColor3 = Color3.fromRGB(255, 255, 255),
+                        Size = UDim2.new(1, 0, 0.43, -8),
+                        [Fusion.Children] = {
+                            scope:New 'UICorner' {
+                                CornerRadius = UDim.new(0, 14)
+                            },
+                            scope:New 'Frame' {
+                                Name = 'Pointer',
+                                AnchorPoint = Vector2.new(0, 0.5),
+                                BackgroundColor3 = Color3.fromRGB(255, 255, 255),
+                                BackgroundTransparency = 1,
+                                Position = UDim2.new(1, 0, 0.5, 0),
+                                Size = UDim2.new(0, 10, 0, 10),
+                                [Fusion.Children] = {
+                                    scope:New 'UICorner' {
+                                        CornerRadius = UDim.new(1, 0)
+                                    },
+                                    scope:New 'UIStroke' {
+                                        Name = 'Ignore',
+                                        Thickness = 3,
+                                        Color = Color3.fromRGB(255, 255, 255)
+                                    }
+                                }
+                            }
+                        }
+                    },
+                    scope:New 'ImageLabel' {
+                        Name = 'ValueFrame',
+                        LayoutOrder = 1,
+                        AnchorPoint = Vector2.new(0.5, 0),
+                        Image = 'http://www.roblox.com/asset/?id=181615071',
+                        BackgroundColor3 = Color3.fromRGB(255, 66, 66),
+                        Size = UDim2.new(1, 0, 0.1, -8),
+                        [Fusion.Children] = {
+                            scope:New 'UICorner' {
+                                CornerRadius = UDim.new(0.5, 0)
+                            },
+                            scope:New 'Frame' {
+                                Name = 'Pointer',
+                                AnchorPoint = Vector2.new(0, 0.5),
+                                BackgroundColor3 = Color3.fromRGB(255, 255, 255),
+                                BackgroundTransparency = 1,
+                                Position = UDim2.new(0.8, 0, 0.5, 0),
+                                Size = UDim2.new(0, 10, 0, 10),
+                                [Fusion.Children] = {
+                                    scope:New 'UIStroke' {
+                                        Name = 'Ignore',
+                                        Thickness = 3,
+                                        Color = Color3.fromRGB(255, 255, 255)
+                                    },
+                                    scope:New 'UICorner' {
+                                        CornerRadius = UDim.new(1, 0)
+                                    }
+                                }
+                            }
+                        }
+                    },
+                    scope:New 'Frame' {
+                        Name = 'ColorPreviews',
+                        LayoutOrder = 2,
+                        BackgroundTransparency = 1,
+                        BackgroundColor3 = Color3.fromRGB(255, 255, 255),
+                        Size = UDim2.new(1, 0, 0.3, -8),
+                        [Fusion.Children] = {
+                            scope:New 'UIListLayout' {
+                                Name = 'UIListLayout',
+                                FillDirection = Enum.FillDirection.Horizontal,
+                                SortOrder = Enum.SortOrder.LayoutOrder,
+                                HorizontalAlignment = Enum.HorizontalAlignment.Center,
+                                Padding = UDim.new(0, 6)
+                            },
+                            scope:New 'Frame' {
+                                Name = 'Hex',
+                                LayoutOrder = 0,
+                                BackgroundTransparency = 1,
+                                BackgroundColor3 = Color3.fromRGB(255, 255, 255),
+                                Size = UDim2.new(0.45, 0, 1, 0),
+                                [Fusion.Children] = {
+                                    scope:New 'UIListLayout' {
+                                        Name = 'UIListLayout',
+                                        SortOrder = Enum.SortOrder.LayoutOrder,
+                                        Padding = UDim.new(0, 6)
+                                    },
+                                    scope:New 'Frame' {
+                                        Name = 'ColorDisplay',
+                                        LayoutOrder = 0,
+                                        BackgroundColor3 = Color3.fromRGB(255, 73, 73),
+                                        Size = UDim2.new(1, 0, 0.5, -3),
+                                        [Fusion.Children] = {
+                                            scope:New 'UICorner' {
+                                                CornerRadius = UDim.new(0, 14)
+                                            },
+                                            scope:New 'UIStroke' {
+                                                BorderStrokePosition = Enum.BorderStrokePosition.Inner,
+                                                Color = Color3.fromRGB(255, 255, 255),
+                                                Transparency = 0.8,
+                                                Thickness = 1.5
+                                            }
+                                        }
+                                    },
+                                    scope:New 'Frame' {
+                                        Name = 'Hex',
+                                        LayoutOrder = 1,
+                                        BackgroundColor3 = Color3.fromRGB(255, 255, 255),
+                                        Size = UDim2.new(1, 0, 0.5, -3),
+                                        [Fusion.Children] = {
+                                            scope:New 'UICorner' {
+                                                CornerRadius = UDim.new(0, 14)
+                                            },
+                                            scope:New 'TextBox' {
+                                                BackgroundTransparency = 1,
+                                                Size = UDim2.new(1, 0, 1, 0),
+                                                Text = '#ffffff',
+                                                FontFace = Font.new('rbxassetid://12187365364', Enum.FontWeight.Bold, Enum.FontStyle.Normal),
+                                                TextWrapped = true,
+                                                TextXAlignment = Enum.TextXAlignment.Left,
+                                                TextColor3 = Scoper.Unwrap(theme.Themes.Text.Description.Color),
+                                                TextScaled = true,
+                                                [Fusion.Children] = {
+                                                    scope:New 'UIPadding' {
+                                                        Name = 'UIPadding',
+                                                        PaddingTop = UDim.new(0.25, 0),
+                                                        PaddingBottom = UDim.new(0.25, 0),
+                                                        PaddingLeft = UDim.new(0.1, 0),
+                                                        PaddingRight = UDim.new(0.1, 0)
+                                                    }
+                                                }
+                                            },
+                                            scope:New 'UIGradient' {
+                                                Name = 'UIGradient',
+                                                Rotation = Scoper.Unwrap(theme.Themes.Component.Rotation),
+                                                Color = Colors.Get(theme.Themes.Component.Color)
+                                            }
+                                        }
+                                    }
+                                }
+                            },
+                            scope:New 'Frame' {
+                                Name = 'RGB',
+                                LayoutOrder = 1,
+                                AnchorPoint = Vector2.new(1, 0),
+                                BackgroundTransparency = 1,
+                                BackgroundColor3 = Color3.fromRGB(255, 255, 255),
+                                Size = UDim2.new(0.525, 0, 1, 0),
+                                [Fusion.Children] = {
+                                    scope:New 'UIListLayout' {
+                                        Name = 'UIListLayout',
+                                        FillDirection = Enum.FillDirection.Horizontal,
+                                        SortOrder = Enum.SortOrder.LayoutOrder,
+                                        HorizontalAlignment = Enum.HorizontalAlignment.Center,
+                                        Padding = UDim.new(0, 6)
+                                    },
+                                    scope:New 'Frame' {
+                                        Name = 'R',
+                                        LayoutOrder = 0,
+                                        BackgroundTransparency = 1,
+                                        BackgroundColor3 = Color3.fromRGB(255, 255, 255),
+                                        Size = UDim2.new(0.33, -4, 1, 0),
+                                        [Fusion.Children] = {
+                                            scope:New 'UIListLayout' {
+                                                Name = 'UIListLayout',
+                                                SortOrder = Enum.SortOrder.LayoutOrder,
+                                                HorizontalAlignment = Enum.HorizontalAlignment.Center
+                                            },
+                                            scope:New 'TextLabel' {
+                                                Name = 'Title',
+                                                LayoutOrder = 0,
+                                                FontFace = Font.new('rbxasset://fonts/families/SourceSansPro.json', Enum.FontWeight.Bold, Enum.FontStyle.Normal),
+                                                BackgroundColor3 = Color3.fromRGB(255, 255, 255),
+                                                TextColor3 = Scoper.Unwrap(theme.Themes.Text.Title.Color),
+                                                Text = 'R',
+                                                TextScaled = false,
+                                                TextSize = 16,
+                                                AnchorPoint = Vector2.new(0.5, 0),
+                                                TextWrapped = true,
+                                                BackgroundTransparency = 1,
+                                                TextTransparency = 0.2,
+                                                Size = UDim2.new(1, 0, 0.5, 0)
+                                            },
+                                            scope:New 'TextBox' {
+                                                Name = 'Input',
+                                                LayoutOrder = 1,
+                                                BackgroundColor3 = Color3.fromRGB(255, 255, 255),
+                                                FontFace = Font.new('rbxassetid://12187365364'),
+                                                TextScaled = false,
+                                                TextSize = 16,
+                                                TextColor3 = Scoper.Unwrap(theme.Themes.Text.Description.Color),
+                                                Text = '255',
+                                                CursorPosition = -1,
+                                                TextWrapped = true,
+                                                AnchorPoint = Vector2.new(0, 1),
+                                                BackgroundTransparency = 1,
+                                                PlaceholderColor3 = Color3.fromRGB(178, 178, 178),
+                                                Size = UDim2.new(1, 0, 0.55, 0),
+                                                [Fusion.Children] = {
+                                                    scope:New 'UIPadding' {
+                                                        Name = 'UIPadding',
+                                                        PaddingTop = UDim.new(0.1, 0),
+                                                        PaddingBottom = UDim.new(0.1, 0)
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    },
+                                    scope:New 'Frame' {
+                                        Name = 'G',
+                                        LayoutOrder = 1,
+                                        BackgroundTransparency = 1,
+                                        BackgroundColor3 = Color3.fromRGB(255, 255, 255),
+                                        Size = UDim2.new(0.33, -4, 1, 0),
+                                        [Fusion.Children] = {
+                                            scope:New 'UIListLayout' {
+                                                Name = 'UIListLayout',
+                                                SortOrder = Enum.SortOrder.LayoutOrder,
+                                                HorizontalAlignment = Enum.HorizontalAlignment.Center
+                                            },
+                                            scope:New 'TextBox' {
+                                                Name = 'Input',
+                                                LayoutOrder = 1,
+                                                TextWrapped = true,
+                                                BackgroundColor3 = Color3.fromRGB(255, 255, 255),
+                                                TextColor3 = Scoper.Unwrap(theme.Themes.Text.Description.Color),
+                                                Text = '255',
+                                                TextScaled = false,
+                                                TextSize = 16,
+                                                AnchorPoint = Vector2.new(0, 1),
+                                                FontFace = Font.new('rbxassetid://12187365364'),
+                                                BackgroundTransparency = 1,
+                                                PlaceholderColor3 = Color3.fromRGB(178, 178, 178),
+                                                Size = UDim2.new(1, 0, 0.55, 0),
+                                                [Fusion.Children] = {
+                                                    scope:New 'UIPadding' {
+                                                        Name = 'UIPadding',
+                                                        PaddingTop = UDim.new(0.1, 0),
+                                                        PaddingBottom = UDim.new(0.1, 0)
+                                                    }
+                                                }
+                                            },
+                                            scope:New 'TextLabel' {
+                                                Name = 'Title',
+                                                LayoutOrder = 0,
+                                                FontFace = Font.new('rbxasset://fonts/families/SourceSansPro.json', Enum.FontWeight.Bold, Enum.FontStyle.Normal),
+                                                BackgroundColor3 = Color3.fromRGB(255, 255, 255),
+                                                TextColor3 = Scoper.Unwrap(theme.Themes.Text.Title.Color),
+                                                Text = 'G',
+                                                TextScaled = false,
+                                                TextSize = 16,
+                                                AnchorPoint = Vector2.new(0.5, 0),
+                                                TextWrapped = true,
+                                                BackgroundTransparency = 1,
+                                                TextTransparency = 0.2,
+                                                Size = UDim2.new(1, 0, 0.5, 0)
+                                            }
+                                        }
+                                    },
+                                    scope:New 'Frame' {
+                                        Name = 'B',
+                                        LayoutOrder = 2,
+                                        BackgroundTransparency = 1,
+                                        BackgroundColor3 = Color3.fromRGB(255, 255, 255),
+                                        Size = UDim2.new(0.33, -4, 1, 0),
+                                        [Fusion.Children] = {
+                                            scope:New 'UIListLayout' {
+                                                Name = 'UIListLayout',
+                                                SortOrder = Enum.SortOrder.LayoutOrder,
+                                                HorizontalAlignment = Enum.HorizontalAlignment.Center
+                                            },
+                                            scope:New 'TextLabel' {
+                                                Name = 'Title',
+                                                LayoutOrder = 0,
+                                                FontFace = Font.new('rbxasset://fonts/families/SourceSansPro.json', Enum.FontWeight.Bold, Enum.FontStyle.Normal),
+                                                BackgroundColor3 = Color3.fromRGB(255, 255, 255),
+                                                TextColor3 = Scoper.Unwrap(theme.Themes.Text.Title.Color),
+                                                Text = 'B',
+                                                TextScaled = false,
+                                                TextSize = 16,
+                                                AnchorPoint = Vector2.new(0.5, 0),
+                                                TextWrapped = true,
+                                                BackgroundTransparency = 1,
+                                                TextTransparency = 0.2,
+                                                Size = UDim2.new(1, 0, 0.5, 0)
+                                            },
+                                            scope:New 'TextBox' {
+                                                Name = 'Input',
+                                                LayoutOrder = 1,
+                                                BackgroundColor3 = Color3.fromRGB(255, 255, 255),
+                                                FontFace = Font.new('rbxassetid://12187365364'),
+                                                TextScaled = false,
+                                                TextSize = 16,
+                                                TextColor3 = Scoper.Unwrap(theme.Themes.Text.Description.Color),
+                                                Text = '255',
+                                                CursorPosition = -1,
+                                                TextWrapped = true,
+                                                AnchorPoint = Vector2.new(0, 1),
+                                                BackgroundTransparency = 1,
+                                                PlaceholderColor3 = Color3.fromRGB(178, 178, 178),
+                                                Size = UDim2.new(1, 0, 0.55, 0),
+                                                [Fusion.Children] = {
+                                                    scope:New 'UIPadding' {
+                                                        Name = 'UIPadding',
+                                                        PaddingTop = UDim.new(0.1, 0),
+                                                        PaddingBottom = UDim.new(0.1, 0)
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    },
+                    scope:New 'Frame' {
+                        Name = 'Padding',
+                        Size = UDim2.new(1, 0, 0.04, -8),
+                        LayoutOrder = 3,
+                        BackgroundTransparency = 1
+                    },
+                    scope:New 'Frame' {
+                        Name = 'Buttons',
+                        LayoutOrder = 4,
+                        AnchorPoint = Vector2.new(0, 1),
+                        BackgroundTransparency = 1,
+                        BackgroundColor3 = Color3.fromRGB(255, 255, 255),
+                        Size = UDim2.new(1, 0, 0.15, -8),
+                        [Fusion.Children] = {
+                            scope:New 'UIListLayout' {
+                                Name = 'UIListLayout',
+                                SortOrder = Enum.SortOrder.LayoutOrder,
+                                HorizontalAlignment = Enum.HorizontalAlignment.Center,
+                                Padding = UDim.new(0, 6),
+                                FillDirection = Enum.FillDirection.Horizontal
+                            },
+                            scope:New 'TextButton' {
+                                Name = 'Close',
+                                LayoutOrder = 0,
+                                TextTransparency = 1,
+                                AutoButtonColor = false,
+                                BackgroundColor3 = Color3.fromRGB(255, 255, 255),
+                                Size = UDim2.new(0.5, -3, 1, 0),
+                                [Fusion.OnEvent 'MouseButton1Click'] = function()
+                                    theme.PopupActive:set(false)
+                                    isOpen:set(false)
+                                    Animate.ControlTransparency(colorPickerObject, 0.3, 1)
+                                    task.delay(0.3, function()
+                                        scope:doCleanup()
+                                    end)
+                                end,
+                                [Fusion.Children] = {
+                                    scope:New 'UICorner' {
+                                        CornerRadius = UDim.new(0, 14)
+                                    },
+                                    scope:New 'UIGradient' {
+                                        Name = 'UIGradient',
+                                        Rotation = Scoper.Unwrap(theme.Themes.Component.Rotation),
+                                        Color = Colors.Get(theme.Themes.Component.Color)
+                                    },
+                                    scope:New 'TextLabel' {
+                                        Size = UDim2.fromScale(1, 1),
+                                        BackgroundTransparency = 1,
+                                        TextSize = 14,
+                                        Text = 'Close',
+                                        TextColor3 = Scoper.Unwrap(theme.Themes.Text.Description.Color),
+                                        FontFace = Font.new('rbxassetid://12187365364', Enum.FontWeight.Bold, Enum.FontStyle.Normal)
+                                    }
+                                }
+                            },
+                            scope:New 'TextButton' {
+                                Name = 'Done',
+                                LayoutOrder = 1,
+                                FontFace = Font.new('rbxassetid://12187365364', Enum.FontWeight.Heavy, Enum.FontStyle.Normal),
+                                TextColor3 = Color3.fromRGB(255, 255, 255),
+                                Text = 'Done',
+                                AutoButtonColor = false,
+                                BackgroundColor3 = Scoper.Unwrap(theme.Themes.Accent),
+                                TextSize = 14,
+                                Size = UDim2.new(0.5, -3, 1, 0),
+                                [Fusion.OnEvent 'MouseButton1Click'] = function()
+                                    config.Callback(selectedColor)
+                                    theme.PopupActive:set(false)
+                                    isOpen:set(false)
+                                    Animate.ControlTransparency(colorPickerObject, 0.3, 1)
+                                    task.delay(0.3, function()
+                                        scope:doCleanup()
+                                    end)
+                                end,
+                                [Fusion.Children] = {
+                                    scope:New 'UICorner' {
+                                        CornerRadius = UDim.new(0, 14)
+                                    }
+                                }
+                            }
+                        }
+                    },
+                    scope:New 'UIGradient' {
+                        Name = 'UIGradient',
+                        Color = Colors.Get(theme.Themes.Background.Color),
+                        Rotation = Scoper.Unwrap(theme.Themes.Background.Rotation)
+                    },
+                    scope:New 'UIStroke' {
+                        Name = 'UIStroke',
+                        Thickness = 2,
+                        Color = Color3.fromRGB(255, 255, 255),
+                        BorderStrokePosition = Enum.BorderStrokePosition.Inner,
+                        [Fusion.Children] = {
+                            scope:New 'UIGradient' {
+                                Name = 'UIGradient',
+                                Color = Colors.Get(theme.Themes.Background.InnerOutline.Color),
+                                Transparency = Colors.Get(theme.Themes.Background.InnerOutline.Transparency, true),
+                                Rotation = Scoper.Unwrap(theme.Themes.Background.InnerOutline.Rotation)
+                            }
+                        }
+                    },
+                    scope:New 'UIStroke' {
+                        Name = 'UIStroke',
+                        Thickness = 0.5,
+                        Color = Color3.fromRGB(255, 255, 255),
+                        [Fusion.Children] = {
+                            scope:New 'UIGradient' {
+                                Name = 'UIGradient',
+                                Color = Colors.Get(theme.Themes.Background.OuterOutline.Color),
+                                Transparency = Colors.Get(theme.Themes.Background.OuterOutline.Transparency, true),
+                                Rotation = Scoper.Unwrap(theme.Themes.Background.OuterOutline.Rotation)
+                            }
+                        }
+                    },
+                    scope:New 'UICorner' {
+                        Name = 'UICorner',
+                        CornerRadius = UDim.new(0, 20)
+                    }
+                }
+            }
+            
+            -- Store component references
+            colorComponents.HueSaturationFrame = colorPickerObject.HueSaturationFrame
+            colorComponents.ValueFrame = colorPickerObject.ValueFrame
+            colorComponents.HueSaturationPointer = colorPickerObject.HueSaturationFrame.Pointer
+            colorComponents.ValuePointer = colorPickerObject.ValueFrame.Pointer
+            colorComponents.Display = colorPickerObject.ColorPreviews.Hex.ColorDisplay
+            colorComponents.HexText = colorPickerObject.ColorPreviews.Hex.Hex.TextBox
+            colorComponents.RInput = colorPickerObject.ColorPreviews.RGB.R.Input
+            colorComponents.GInput = colorPickerObject.ColorPreviews.RGB.G.Input
+            colorComponents.BInput = colorPickerObject.ColorPreviews.RGB.B.Input
+            
+            -- Setup input handlers
+            setupInputHandlers()
+            
+            -- Show animation
+            Transparency.Add(colorPickerObject)
+            Transparency.ControlTransparency(colorPickerObject, 0, 1)
+            theme.PopupActive:set(true)
+            isOpen:set(true)
+            Transparency.ControlTransparency(colorPickerObject, 0.3, 0)
+            updateColorDisplay()
+            
+            return colorPickerObject
+        end
+        
+        return ColorPicker
+    end,
+    
+    -- Dropdown Popup
+    function()
+        local Holder = require(moduleData[16][2])
+        local Fusion = require(moduleData[16][2])
+        local Scoper = require(moduleData[113][2])
+        local Transparency = require(moduleData[114][2])
+        local Animate = require(moduleData[111][2])
+        local Colors = require(moduleData[112][2])
+        
+        type Configuration = {
+            Title: string,
+            Options: {string},
+            MultiDropdown: boolean,
+            CurrentOptions: {string},
+            Callback: (string | {string}) -> ()
+        }
+        
+        local Dropdown = {}
+        
+        function Dropdown.new(config: Configuration, theme)
+            local scope = theme.Scope:innerScope({})
+            local isOpen = scope:Value(false)
+            local selectedItems = scope:Value({})
+            local searchText = scope:Value('')
+            local colorUtil = Colors(scope)
+            
+            local function toggleItemSelection(item, isSelected)
+                if isSelected then
+                    local currentSelection = Scoper.Unwrap(isSelected)
+                    isSelected:set(not currentSelection)
+                end
+                
+                local selectedList = Scoper.Unwrap(selectedItems)
+                local newSelection = {}
+                local found = false
+                
+                for _, selected in selectedList do
+                    if selected == item then
+                        found = true
+                    else
+                        table.insert(newSelection, selected)
+                    end
+                end
+                
+                if not found then
+                    table.insert(newSelection, item)
+                end
+                
+                selectedItems:set(newSelection)
+            end
+            
+            -- Filter options based on search
+            local filteredOptions = scope:Computed(function(scope)
+                local search = scope(searchText):lower()
+                if search == '' then
+                    return config.Options
+                end
+                
+                local results = {}
+                for _, option in config.Options do
+                    if option:lower():find(search, 1, true) then
+                        table.insert(results, option)
+                    end
+                end
+                return results
+            end)
+            
+            local dropdownObject = scope:New 'Frame' {
+                Name = 'Popup',
+                AnchorPoint = Vector2.new(0.5, 0.5),
+                BackgroundColor3 = Color3.fromRGB(255, 255, 255),
+                Position = UDim2.new(0.5, 0, 0.5, 0),
+                ZIndex = 11,
+                Parent = theme.Object,
+                Size = Animate(function(scope)
+                    local open = scope(isOpen)
+                    local scale = (open and 0.85) or 0.8
+                    return UDim2.fromScale(scale, scale)
+                end, 25, 0.7, scope),
+                [Fusion.Children] = {
+                    scope:New 'UIGradient' {
+                        Name = 'UIGradient',
+                        Color = colorUtil.Get(theme.Themes.Background.Color),
+                        Rotation = Scoper.Unwrap(theme.Themes.Background.Rotation)
+                    },
+                    scope:New 'Frame' {
+                        Name = 'Holder',
+                        AnchorPoint = Vector2.new(0.5, 0),
+                        BackgroundColor3 = Color3.fromRGB(255, 255, 255),
+                        Position = UDim2.new(0.5, 0, 0, 35),
+                        ZIndex = 2,
+                        Size = UDim2.new(1, -10, 1, -40),
+                        [Fusion.Children] = {
+                            scope:New 'ScrollingFrame' {
+                                Name = 'Home',
+                                ScrollBarImageColor3 = Scoper.Unwrap(theme.Themes.Content.ScrollBarColor),
+                                ScrollBarThickness = 0,
+                                Size = UDim2.new(1, 0, 1, 0),
+                                BackgroundTransparency = 1,
+                                CanvasSize = UDim2.new(1, 0, 0, 0),
+                                Position = UDim2.new(0, 0, 0, 0),
+                                AutomaticCanvasSize = Enum.AutomaticSize.Y,
+                                BackgroundColor3 = Color3.fromRGB(255, 255, 255),
+                                ScrollBarImageTransparency = 0.6,
+                                [Fusion.Children] = {
+                                    scope:New 'UIListLayout' {
+                                        Name = 'UIListLayout',
+                                        SortOrder = Enum.SortOrder.LayoutOrder,
+                                        HorizontalAlignment = Enum.HorizontalAlignment.Center,
+                                        Padding = UDim.new(0, 4)
+                                    },
+                                    scope:New 'UIPadding' {
+                                        Name = 'UIPadding',
+                                        PaddingTop = UDim.new(0, 5),
+                                        PaddingBottom = UDim.new(0, 5)
+                                    },
+                                    scope:New 'Frame' {
+                                        Name = 'SearchContainer',
+                                        BackgroundColor3 = Color3.fromRGB(255, 255, 255),
+                                        BackgroundTransparency = 0.2,
+                                        Size = UDim2.new(1, -10, 0, 35),
+                                        Position = UDim2.new(0.5, 0, 0, 5),
+                                        AnchorPoint = Vector2.new(0.5, 0),
+                                        [Fusion.Children] = {
+                                            scope:New 'UICorner' {
+                                                CornerRadius = UDim.new(1, 0)
+                                            },
+                                            scope:New 'UIGradient' {
+                                                Name = 'UIGradient',
+                                                Rotation = theme.Themes.Component.Rotation,
+                                                Color = colorUtil.Get(theme.Themes.Component.Color)
+                                            },
+                                            scope:New 'TextBox' {
+                                                Name = 'SearchBox',
+                                                BackgroundTransparency = 1,
+                                                Size = UDim2.new(1, -25, 1, 0),
+                                                Position = UDim2.new(0, 10, 0, 0),
+                                                Text = '',
+                                                PlaceholderText = 'Search options...',
+                                                PlaceholderColor3 = Scoper.Unwrap(theme.Themes.Text.Title.Color),
+                                                TextColor3 = Scoper.Unwrap(theme.Themes.Text.Title.Color),
+                                                TextTransparency = 0.3,
+                                                TextSize = 12,
+                                                TextXAlignment = Enum.TextXAlignment.Left,
+                                                ClearTextOnFocus = false,
+                                                FontFace = Font.new('rbxassetid://12187365364', Enum.FontWeight.Medium, Enum.FontStyle.Normal),
+                                                [Fusion.OnChange 'Text'] = function(property)
+                                                    if property == 'Text' then
+                                                        searchText:set(dropdownObject.Holder.Home.SearchContainer.SearchBox.Text)
+                                                    end
+                                                end
+                                            }
+                                        }
+                                    },
+                                    config.MultiDropdown and scope:New 'TextButton' {
+                                        Size = UDim2.new(1, -10, 0, 30),
+                                        BackgroundColor3 = Scoper.Unwrap(theme.Themes.Accent),
+                                        AutoButtonColor = false,
+                                        Text = '',
+                                        LayoutOrder = -1,
+                                        [Fusion.OnEvent 'MouseButton1Click'] = function()
+                                            local finalSelection = Scoper.Unwrap(selectedItems)
+                                            config.Callback(finalSelection)
+                                            theme.PopupActive:set(false)
+                                            isOpen:set(false)
+                                            Animate.ControlTransparency(dropdownObject, 0.3, 1)
+                                            task.delay(0.3, function()
+                                                scope:doCleanup()
+                                            end)
+                                        end,
+                                        [Fusion.Children] = {
+                                            scope:New 'UICorner' {
+                                                CornerRadius = UDim.new(0.4, 0)
+                                            },
+                                            scope:New 'TextLabel' {
+                                                Position = UDim2.fromScale(0.5, 0.5),
+                                                AnchorPoint = Vector2.new(0.5, 0.5),
+                                                Size = UDim2.fromScale(1, 1),
+                                                BackgroundTransparency = 1,
+                                                Text = 'Submit',
+                                                TextXAlignment = Enum.TextXAlignment.Center,
+                                                TextColor3 = Color3.fromRGB(255, 255, 255),
+                                                TextTransparency = 0.2,
+                                                FontFace = Font.new('rbxassetid://12187365364', Enum.FontWeight.Bold, Enum.FontStyle.Normal),
+                                                TextSize = 12
+                                            }
+                                        }
+                                    },
+                                    scope:Computed(function(scope)
+                                        local options = scope(filteredOptions)
+                                        local optionElements = {}
+                                        
+                                        for _, option in options do
+                                            local isSelected = scope:Value(false)
+                                            local isInCurrentSelection = table.find(config.CurrentOptions or {}, option)
+                                            
+                                            if isInCurrentSelection then
+                                                toggleItemSelection(option, nil)
+                                            end
+                                            
+                                            local optionButton = scope:New 'TextButton' {
+                                                Size = UDim2.new(1, -10, 0, 38),
+                                                BackgroundColor3 = Color3.fromRGB(255, 255, 255),
+                                                AutoButtonColor = false,
+                                                Text = '',
+                                                [Fusion.OnEvent 'MouseEnter'] = function()
+                                                    optionButton.BackgroundTransparency = 0.5
+                                                end,
+                                                [Fusion.OnEvent 'MouseLeave'] = function()
+                                                    optionButton.BackgroundTransparency = 0
+                                                end,
+                                                [Fusion.OnEvent 'MouseButton1Down'] = function()
+                                                    if not config.MultiDropdown then
+                                                        config.Callback(option)
+                                                        theme.PopupActive:set(false)
+                                                        isOpen:set(false)
+                                                        Animate.ControlTransparency(dropdownObject, 0.3, 1)
+                                                        task.delay(0.3, function()
+                                                            scope:doCleanup()
+                                                        end)
+                                                    else
+                                                        toggleItemSelection(option, isSelected)
+                                                    end
+                                                end,
+                                                [Fusion.Children] = {
+                                                    scope:New 'UICorner' {
+                                                        CornerRadius = UDim.new(0, 10)
+                                                    },
+                                                    scope:New 'UIGradient' {
+                                                        Name = 'UIGradient',
+                                                        Rotation = theme.Themes.Component.Rotation,
+                                                        Color = colorUtil.Get(theme.Themes.Component.Color)
+                                                    },
+                                                    scope:New 'Frame' {
+                                                        Name = 'SelectIndicator',
+                                                        AnchorPoint = Vector2.new(0.5, 0.5),
+                                                        Size = UDim2.fromOffset(3, 10),
+                                                        BackgroundColor3 = Scoper.Unwrap(theme.Themes.Accent),
+                                                        BackgroundTransparency = Transparency(function(scope)
+                                                            local selected = scope(isSelected)
+                                                            local open = scope(isOpen)
+                                                            return (not open and 1) or (selected and 0) or 1
+                                                        end, 18, 0.8, scope),
+                                                        Position = Transparency(function(scope)
+                                                            local selected = scope(isSelected)
+                                                            local open = scope(isOpen)
+                                                            local offset = (not open and -0.05) or (selected and 0) or -0.05
+                                                            return UDim2.fromScale(offset, 0.5)
+                                                        end, 18, 0.8, scope),
+                                                        [Fusion.Children] = {
+                                                            scope:New 'UICorner' {
+                                                                CornerRadius = UDim.new(1, 0)
+                                                            }
+                                                        }
+                                                    },
+                                                    scope:New 'TextLabel' {
+                                                        Position = UDim2.new(0, 12, 0.5, 0),
+                                                        AnchorPoint = Vector2.new(0, 0.5),
+                                                        Size = UDim2.fromScale(1, 1),
+                                                        BackgroundTransparency = 1,
+                                                        Text = option,
+                                                        TextXAlignment = Enum.TextXAlignment.Left,
+                                                        TextColor3 = Scoper.Unwrap(theme.Themes.Text.Title.Color),
+                                                        TextTransparency = 0.2,
+                                                        FontFace = Font.new('rbxassetid://12187365364', Enum.FontWeight.Bold, Enum.FontStyle.Normal),
+                                                        TextSize = 12
+                                                    }
+                                                }
+                                            }
+                                            
+                                            table.insert(optionElements, optionButton)
+                                        end
+                                        
+                                        return optionElements
+                                    end)
+                                }
+                            }
+                        }
+                    },
+                    scope:New 'UIStroke' {
+                        Name = 'UIStroke',
+                        Color = Scoper.Unwrap(theme.Themes.Content.InnerOutline.Color),
+                        Transparency = Scoper.Unwrap(theme.Themes.Content.InnerOutline.Transparency),
+                        BorderStrokePosition = Enum.BorderStrokePosition.Inner
+                    },
+                    scope:New 'UIGradient' {
+                        Name = 'UIGradient',
+                        Color = colorUtil.Get(theme.Themes.Content.Color),
+                        Rotation = Scoper.Unwrap(theme.Themes.Content.Rotation)
+                    },
+                    scope:New 'UIStroke' {
+                        Name = 'UIStroke',
+                        Thickness = 0.5,
+                        Color = Color3.fromRGB(255, 255, 255),
+                        [Fusion.Children] = {
+                            scope:New 'UIGradient' {
+                                Name = 'UIGradient',
+                                Color = colorUtil.Get(theme.Themes.Content.OuterOutline.Color),
+                                Transparency = colorUtil.Get(theme.Themes.Content.OuterOutline.Transparency, true),
+                                Rotation = Scoper.Unwrap(theme.Themes.Content.OuterOutline.Rotation)
+                            }
+                        }
+                    },
+                    scope:New 'UIAspectRatioConstraint' {
+                        Name = 'UIAspectRatioConstraint',
+                        AspectRatio = 0.75
+                    },
+                    scope:New 'UICorner' {
+                        Name = 'UICorner',
+                        CornerRadius = UDim.new(0, 20)
+                    },
+                    scope:New 'Frame' {
+                        Name = 'Topbar',
+                        BackgroundColor3 = Color3.fromRGB(255, 255, 255),
+                        BackgroundTransparency = 1,
+                        ZIndex = 2,
+                        Size = UDim2.new(1, 0, 0, 35),
+                        [Fusion.Children] = {
+                            scope:New 'Folder' {
+                                Name = 'Script',
+                                [Fusion.Children] = {
+                                    scope:New 'TextLabel' {
+                                        Name = 'Title',
+                                        LayoutOrder = 1,
+                                        FontFace = Font.new('rbxassetid://12187365364', Enum.FontWeight.Bold, Enum.FontStyle.Normal),
+                                        TextColor3 = Scoper.Unwrap(theme.Themes.Text.Title.Color),
+                                        TextTransparency = 0.2,
+                                        Text = config.Title,
+                                        BackgroundColor3 = Color3.fromRGB(255, 255, 255),
+                                        TextSize = 13,
+                                        BackgroundTransparency = 1,
+                                        RichText = true,
+                                        AutomaticSize = Enum.AutomaticSize.X,
+                                        Size = UDim2.new(0, 0, 0, 20),
+                                        [Fusion.Children] = {
+                                            scope:New 'UIPadding' {
+                                                Name = 'UIPadding',
+                                                PaddingBottom = UDim.new(0, 1)
+                                            }
+                                        }
+                                    },
+                                    scope:New 'UIListLayout' {
+                                        Name = 'UIListLayout',
+                                        VerticalAlignment = Enum.VerticalAlignment.Center,
+                                        SortOrder = Enum.SortOrder.LayoutOrder,
+                                        Padding = UDim.new(0, 8),
+                                        FillDirection = Enum.FillDirection.Horizontal
+                                    }
+                                }
+                            },
+                            scope:New 'Folder' {
+                                Name = 'Buttons',
+                                [Fusion.Children] = {
+                                    scope:New 'UIListLayout' {
+                                        Name = 'UIListLayout',
+                                        VerticalAlignment = Enum.VerticalAlignment.Center,
+                                        FillDirection = Enum.FillDirection.Horizontal,
+                                        HorizontalAlignment = Enum.HorizontalAlignment.Right,
+                                        Padding = UDim.new(0, 10),
+                                        SortOrder = Enum.SortOrder.LayoutOrder
+                                    },
+                                    scope:New 'TextButton' {
+                                        Name = 'Close',
+                                        FontFace = Font.new('rbxasset://fonts/families/SourceSansPro.json'),
+                                        TextColor3 = Color3.fromRGB(0, 0, 0),
+                                        BackgroundColor3 = Color3.fromRGB(255, 255, 255),
+                                        BackgroundTransparency = 1,
+                                        TextTransparency = 1,
+                                        TextSize = 14,
+                                        Size = UDim2.new(0, 20, 0, 20),
+                                        [Fusion.OnEvent 'MouseButton1Click'] = function()
+                                            theme.PopupActive:set(false)
+                                            isOpen:set(false)
+                                            Animate.ControlTransparency(dropdownObject, 0.3, 1)
+                                            task.delay(0.3, function()
+                                                scope:doCleanup()
+                                            end)
+                                        end,
+                                        [Fusion.Children] = {
+                                            scope:New 'ImageLabel' {
+                                                Name = 'Icon',
+                                                ScaleType = Enum.ScaleType.Fit,
+                                                ImageTransparency = Scoper.Unwrap(theme.Themes.Icons.ActionButtons.Transparency),
+                                                BackgroundColor3 = Color3.fromRGB(255, 255, 255),
+                                                AnchorPoint = Vector2.new(0.5, 0.5),
+                                                Image = 'rbxassetid://103624613466093',
+                                                BackgroundTransparency = 1,
+                                                Position = UDim2.new(0.5, 0, 0.5, 0),
+                                                Size = UDim2.new(0.45, 0, 0.45, 0),
+                                                ImageColor3 = Scoper.Unwrap(theme.Themes.Icons.ActionButtons.Color)
+                                            }
+                                        }
+                                    }
+                                }
+                            },
+                            scope:New 'UIPadding' {
+                                Name = 'UIPadding',
+                                PaddingLeft = UDim.new(0, 12),
+                                PaddingRight = UDim.new(0, 12)
+                            }
+                        }
+                    }
+                }
+            }
+            
+            -- Show animation
+            Transparency.Add(dropdownObject)
+            Transparency.ControlTransparency(dropdownObject, 0, 1)
+            theme.PopupActive:set(true)
+            isOpen:set(true)
+            Transparency.ControlTransparency(dropdownObject, 0.3, 0)
+            
+            return dropdownObject
+        end
+        
+        return Dropdown
+    end,
+    
+    -- Notification Component
+    function()
+        local Holder = require(moduleData[17][2])
+        local Fusion = require(moduleData[17][2])
+        local Transparency = require(moduleData[114][2])
+        local Animate = require(moduleData[111][2])
+        local Colors = require(moduleData[112][2])
+        
+        type Configuration = {
+            Title: string,
+            Description: string,
+            Duration: number,
+            Type: 'Success' | 'Error' | 'Info'
+        }
+        
+        local Notification = {}
+        
+        function Notification.new(config: Configuration, theme)
+            local scope = theme.Scope:innerScope({})
+            local notificationSize = scope:Value(UDim2.fromOffset(240, 0))
+            local colorUtil = Colors(scope)
+            
+            local typeColors = {
+                Error = Color3.fromRGB(229, 51, 51),
+                Info = Color3.fromRGB(77, 163, 255),
+                Success = Color3.fromRGB(60, 179, 113)
+            }
+            
+            local typeIcons = {
+                Success = 'rbxassetid://120659272678891',
+                Error = 'rbxassetid://89180847534855',
+                Info = 'rbxassetid://75441143875602'
+            }
+            
+            local typeColor = (typeColors[config.Type or 'Info'] or typeColors.Info)
+            local typeIcon = (typeIcons[config.Type or 'Info'] or typeIcons.Info)
+            
+            local notificationObject = scope:New 'Frame' {
+                Name = 'Notification',
+                AnchorPoint = Vector2.new(1, 1),
+                Position = UDim2.fromScale(1, 1),
+                BackgroundTransparency = 1,
+                ClipsDescendants = true,
+                Parent = theme.ScreenGuis.Notification.Holder,
+                Size = Animate(function(scope)
+                    return scope(notificationSize) + UDim2.fromOffset(2, 2)
+                end, 20, 1, scope),
+                [Fusion.Children] = {
+                    scope:New 'Frame' {
+                        Name = 'Notification',
+                        BackgroundColor3 = Color3.fromRGB(255, 255, 255),
+                        ClipsDescendants = true,
+                        AnchorPoint = Vector2.new(1, 0.5),
+                        Position = UDim2.fromScale(1, 0.5) - UDim2.fromOffset(2, 0),
+                        Size = UDim2.fromOffset(210, 0),
+                        AutomaticSize = Enum.AutomaticSize.Y,
+                        [Fusion.Children] = {
+                            scope:New 'ImageLabel' {
+                                Name = 'Close',
+                                ImageColor3 = theme.Themes.Icons.ActionButtons.Color,
+                                ScaleType = Enum.ScaleType.Fit,
+                                ImageTransparency = theme.Themes.Icons.ActionButtons.Transparency,
+                                BackgroundColor3 = Color3.fromRGB(255, 255, 255),
+                                AnchorPoint = Vector2.new(1, 0),
+                                Image = 'rbxassetid://103624613466093',
+                                BackgroundTransparency = 1,
+                                Position = UDim2.new(1, -15, 0, 15),
+                                Size = UDim2.new(0, 8, 0, 8)
+                            },
+                            scope:New 'UIStroke' {
+                                Name = 'UIStroke',
+                                Thickness = 1,
+                                Color = Color3.fromRGB(255, 255, 255),
+                                BorderStrokePosition = Enum.BorderStrokePosition.Inner,
+                                [Fusion.Children] = {
+                                    scope:New 'UIGradient' {
+                                        Name = 'UIGradient',
+                                        Color = colorUtil.SetupTheme(theme.Themes.Background.InnerOutline.Color),
+                                        Transparency = colorUtil.SetupTheme(theme.Themes.Background.InnerOutline.Transparency, true),
+                                        Rotation = theme.Themes.Background.InnerOutline.Rotation
+                                    }
+                                }
+                            },
+                            scope:New 'TextButton' {
+                                Name = 'Interact',
+                                FontFace = Font.new('rbxasset://fonts/families/SourceSansPro.json'),
+                                TextColor3 = Color3.fromRGB(0, 0, 0),
+                                Text = '',
+                                BackgroundTransparency = 1,
+                                AnchorPoint = Vector2.new(0.5, 0.5),
+                                Position = UDim2.fromScale(0.5, 0.5),
+                                ZIndex = 5,
+                                TextSize = 14,
+                                Size = UDim2.fromScale(1, 1),
+                                [Fusion.OnEvent 'Activated'] = function()
+                                    if not Scoper.IsPoisoned(scope) then
+                                        Animate.ControlTransparency(notificationObject, 0.25, 1)
+                                        notificationSize:set(UDim2.fromOffset(250, 0))
+                                        task.delay(0.25, function()
+                                            if not Scoper.IsPoisoned(scope) then
+                                                scope:doCleanup()
+                                            end
+                                        end)
+                                    end
+                                end
+                            },
+                            scope:New 'UIStroke' {
+                                Name = 'UIStroke',
+                                Thickness = 0.5,
+                                Color = Color3.fromRGB(255, 255, 255),
+                                [Fusion.Children] = {
+                                    scope:New 'UIGradient' {
+                                        Name = 'UIGradient',
+                                        Color = colorUtil.SetupTheme(theme.Themes.Background.OuterOutline.Color),
+                                        Transparency = colorUtil.SetupTheme(theme.Themes.Background.OuterOutline.Transparency, true),
+                                        Rotation = theme.Themes.Background.OuterOutline.Rotation
+                                    }
+                                }
+                            },
+                            scope:New 'UIGradient' {
+                                Name = 'UIGradient',
+                                Color = colorUtil.SetupTheme(theme.Themes.Background.Color),
+                                Rotation = theme.Themes.Background.Rotation
+                            },
+                            scope:New 'Frame' {
+                                Name = 'Frame',
+                                BackgroundTransparency = 1,
+                                Position = UDim2.new(0, 35, 0, 0),
+                                ZIndex = 2,
+                                AutomaticSize = Enum.AutomaticSize.Y,
+                                Size = UDim2.new(1, -65, 1, 0),
+                                [Fusion.Children] = {
+                                    scope:New 'TextLabel' {
+                                        Name = 'Title',
+                                        TextWrapped = true,
+                                        AnchorPoint = Vector2.new(0.5, 0),
+                                        ZIndex = 3,
+                                        Size = UDim2.new(1, 0, 0, 10),
+                                        RichText = true,
+                                        TextColor3 = theme.Themes.Text.Title.Color,
+                                        Text = config.Title,
+                                        TextSize = 14,
+                                        BackgroundTransparency = 1,
+                                        TextXAlignment = Enum.TextXAlignment.Left,
+                                        Position = UDim2.new(0.5, 0, 0, 15),
+                                        FontFace = Font.new('rbxassetid://12187365364', Enum.FontWeight.Bold, Enum.FontStyle.Normal),
+                                        AutomaticSize = Enum.AutomaticSize.Y,
+                                        [Fusion.Children] = {
+                                            scope:New 'ImageLabel' {
+                                                Name = 'Icon',
+                                                ImageColor3 = typeColor,
+                                                BackgroundColor3 = Color3.fromRGB(255, 255, 255),
+                                                AnchorPoint = Vector2.new(0.5, 0.5),
+                                                Image = typeIcon,
+                                                BackgroundTransparency = 1,
+                                                ImageTransparency = 0,
+                                                Position = UDim2.new(0, -15, 0.5, 0),
+                                                Size = UDim2.new(0, 15, 0, 15)
+                                            }
+                                        }
+                                    },
+                                    scope:New 'TextLabel' {
+                                        Name = 'Description',
+                                        FontFace = Font.new('rbxassetid://12187365364', Enum.FontWeight.SemiBold, Enum.FontStyle.Normal),
+                                        TextTransparency = 0.15,
+                                        AnchorPoint = Vector2.new(0.5, 0.5),
+                                        ZIndex = 2,
+                                        Size = UDim2.new(1, 0, 0, 5),
+                                        RichText = true,
+                                        TextColor3 = theme.Themes.Text.Description.Color,
+                                        Text = config.Description,
+                                        TextWrapped = true,
+                                        TextSize = 12,
+                                        Position = UDim2.new(0.556, 0, 0.5, 7),
+                                        BackgroundTransparency = 1,
+                                        TextXAlignment = Enum.TextXAlignment.Left,
+                                        AutomaticSize = Enum.AutomaticSize.Y,
+                                        TextYAlignment = Enum.TextYAlignment.Top,
+                                        [Fusion.Children] = {
+                                            scope:New 'Frame' {
+                                                Name = 'Line',
+                                                AnchorPoint = Vector2.new(0.5, 0.5),
+                                                BackgroundColor3 = typeColor,
+                                                BackgroundTransparency = 0.7,
+                                                Position = UDim2.new(0, -15, 0.5, 0),
+                                                Size = UDim2.new(0, 3, 1, 3)
+                                            }
+                                        }
+                                    },
+                                    scope:New 'UIPadding' {
+                                        PaddingTop = UDim.new(0, 14),
+                                        PaddingBottom = UDim.new(0, 16)
+                                    },
+                                    scope:New 'UIListLayout' {
+                                        VerticalAlignment = Enum.VerticalAlignment.Center,
+                                        SortOrder = Enum.SortOrder.LayoutOrder,
+                                        Padding = UDim.new(0, 0)
+                                    }
+                                }
+                            },
+                            scope:New 'UICorner' {
+                                CornerRadius = UDim.new(0, 20)
+                            }
+                        }
+                    }
+                }
+            }
+            
+            local actualSize = notificationObject.Notification.AbsoluteSize
+            
+            Transparency.Add(notificationObject)
+            Transparency.ControlTransparency(notificationObject, 0, 1)
+            task.wait()
+            notificationSize:set(UDim2.fromOffset(actualSize.X + 5, actualSize.Y + 5))
+            Transparency.ControlTransparency(notificationObject, 0.3, math.clamp(
+                Scoper.Unwrap(theme.Themes.WindowTransparency) / 2, 0.15, 1
+            ))
+            
+            -- Auto hide after duration
+            task.delay(config.Duration or 5, function()
+                if not Scoper.IsPoisoned(scope) then
+                    Animate.ControlTransparency(notificationObject, 0.25, 1)
+                    notificationSize:set(UDim2.fromOffset(actualSize.X, 0))
+                    task.delay(0.25, function()
+                        if not Scoper.IsPoisoned(scope) then
+                            scope:doCleanup()
+                        end
+                    end)
+                end
+            end)
+            
+            return notificationObject
+        end
+        
+        return Notification
+    end,
+    
+    -- Window Component
+    function()
+        local Players = game:GetService('Players')
+        local UserInputService = game:GetService('UserInputService')
+        local Fusion = require(moduleData[18][2])
+        local Scoper = require(moduleData[113][2])
+        local Colors = require(moduleData[112][2])
+        local Transparency = require(moduleData[114][2])
+        local Animate = require(moduleData[111][2])
+        local Notification = require(moduleData[17][2])
+        local Mouse = Players.LocalPlayer:GetMouse()
+        
+        type Configuration = {
+            Title: string,
+            SubTitle: string,
+            Size: UDim2?,
+            Transparency: number,
+            MinimumSize: Vector2?,
+            MaximumSize: Vector2?,
+            Icon: string,
+            Parent: GuiObject
+        }
+        
+        local function CreateWindow(config: Configuration)
+            local scope = Fusion.Scope
+            local windowState = {
+                Tabs = scope:Value({}),
+                CurrentTab = scope:Value('None'),
+                PopupActive = scope:Value(false),
+                Title = scope:Value(config.Title),
+                SubTitle = scope:Value(config.SubTitle),
+                Icon = scope:Value(config.Icon),
+                Themes = {
+                    Mode = scope:Value('Light'),
+                    Accent = scope:Value(Color3.fromRGB(97, 155, 199)),
+                    WindowTransparency = scope:Value(config.Transparency or 0),
+                    Background = {
+                        Rotation = scope:Value(90),
+                        Color = scope:Value(ColorSequence.new({
+                            ColorSequenceKeypoint.new(0, Color3.fromRGB(239, 237, 255)),
+                            ColorSequenceKeypoint.new(1, Color3.fromRGB(255, 255, 255))
+                        })),
+                        Line = {
+                            Color = scope:Value(Color3.fromRGB()),
+                            Transparency = scope:Value(0.9)
+                        },
+                        OuterOutline = {
+                            Transparency = scope:Value(0.4),
+                            Color = scope:Value(Color3.fromRGB(0, 0, 0)),
+                            Rotation = scope:Value(0)
+                        },
+                        InnerOutline = {
+                            Transparency = scope:Value(0.45),
+                            Color = scope:Value(Color3.fromRGB(255, 255, 255)),
+                            Rotation = scope:Value(0)
+                        }
+                    },
+                    Text = {
+                        Title = {
+                            Color = scope:Value(Color3.fromRGB(0, 0, 0))
+                        },
+                        Description = {
+                            Color = scope:Value(Color3.fromRGB(110, 110, 110))
+                        }
+                    },
+                    Icons = {
+                        ActionButtons = {
+                            Color = scope:Value(Color3.fromRGB(0, 0, 0)),
+                            Transparency = scope:Value(0.7)
+                        }
+                    },
+                    Content = {
+                        Color = scope:Value(Color3.fromRGB(251, 248, 255)),
+                        Rotation = scope:Value(0),
+                        ScrollBarColor = scope:Value(Color3.fromRGB(200, 200, 200)),
+                        InnerOutline = {
+                            Transparency = scope:Value(0.9),
+                            Color = scope:Value(Color3.fromRGB(0, 0, 0)),
+                            Rotation = scope:Value(0)
+                        },
+                        OuterOutline = {
+                            Transparency = scope:Value(1),
+                            Color = scope:Value(Color3.fromRGB(0, 0, 0)),
+                            Rotation = scope:Value(0)
+                        }
+                    },
+                    Component = {
+                        Color = scope:Value(Color3.fromRGB(245, 242, 249)),
+                        Rotation = scope:Value(0)
+                    },
+                    Controls = {
+                        Color = scope:Value(Color3.fromRGB(235, 232, 239)),
+                        Outline = scope:Value(Color3.fromRGB(227, 225, 231))
+                    }
+                }
+            }
+            
+            local resizingState = {
+                BottomLeft = scope:Value(false),
+                BottomRight = scope:Value(false),
+                FocusedBottomLeft = scope:Value(false),
+                FocusedBottomRight = scope:Value(false)
+            }
+            
+            local minimumSize = (config.MinimumSize or Vector2.new(100, 100))
+            local maximumSize = (config.MaximumSize or Vector2.new(9e9, 9e9))
+            local windowSize = scope:Value(config.Size or UDim2.fromOffset(520, 300))
+            local windowPosition = scope:Value(UDim2.fromScale(0.5, 0.5))
+            local isMinimized = scope:Value(false)
+            local isMaximized = scope:Value(false)
+            local isClosing = scope:Value(false)
+            local draggingData = {
+                isDragging = false,
+                dragStart = nil,
+                originalPosition = nil,
+                dragConnection = nil
+            }
+            local resizingData = {
+                handle = nil,
+                startPos = nil,
+                startSize = nil,
+                windowPos = nil
+            }
+            
+            local TabModule = require(moduleData[19][2])
+            local TabBuilder = TabModule(windowState)
+            
+            local windowObject = scope:New 'Frame' {
+                AnchorPoint = Vector2.new(0.5, 0.5),
+                BackgroundColor3 = Color3.fromRGB(250, 250, 250),
+                ClipsDescendants = true,
+                Parent = config.Parent or theme.ScreenGuis.Window,
+                Name = '_Window',
+                Visible = scope:Computed(function(scope)
+                    return (not scope(isClosing))
+                end),
+                Position = Scoper.Computed(function(scope)
+                    local maximized = scope(isMaximized)
+                    return (maximized and UDim2.fromScale(0.5, 0.5)) or scope(windowPosition)
+                end, 30, 1),
+                Size = Scoper.Computed(function(scope)
+                    local normalSize = scope(windowSize)
+                    local minimized = scope(isMinimized)
+                    local maximized = scope(isMaximized)
+                    return (maximized and UDim2.fromScale(1, 1)) or (minimized and UDim2.new(normalSize.X.Scale, normalSize.X.Offset, 0, 55)) or normalSize
+                end, 30, 1),
+                [Fusion.Children] = {
+                    scope:New 'UIGradient' {
+                        Name = 'UIGradient',
+                        Color = Colors.SetupTheme(windowState.Themes.Background.Color),
+                        Rotation = windowState.Themes.Background.Rotation
+                    },
+                    scope:New 'Frame' {
+                        Name = 'Holder',
+                        AnchorPoint = Vector2.new(0.5, 0),
+                        BackgroundColor3 = Color3.fromRGB(255, 255, 255),
+                        Position = UDim2.new(0.5, 0, 0, 55),
+                        ZIndex = 2,
+                        Size = UDim2.new(1, -10, 1, -60),
+                        Visible = scope:Computed(function(scope)
+                            return (not scope(isMinimized))
+                        end),
+                        [Fusion.Children] = {
+                            scope:New 'UICorner' {
+                                Name = 'UICorner',
+                                CornerRadius = UDim.new(0, 15)
+                            },
+                            scope:New 'UIStroke' {
+                                Name = 'UIStroke',
+                                BorderStrokePosition = Enum.BorderStrokePosition.Inner,
+                                Color = Color3.fromRGB(255, 255, 255),
+                                [Fusion.Children] = {
+                                    scope:New 'UIGradient' {
+                                        Name = 'UIGradient',
+                                        Color = Colors.SetupTheme(windowState.Themes.Content.InnerOutline.Color),
+                                        Transparency = Colors.SetupTheme(windowState.Themes.Content.InnerOutline.Transparency, true),
+                                        Rotation = windowState.Themes.Content.InnerOutline.Rotation
+                                    }
+                                }
+                            },
+                            scope:New 'UIGradient' {
+                                Name = 'UIGradient',
+                                Color = Colors.SetupTheme(windowState.Themes.Content.Color),
+                                Rotation = windowState.Themes.Content.Rotation
+                            },
+                            scope:New 'UIStroke' {
+                                Name = 'UIStroke',
+                                Thickness = 0.5,
+                                Color = Color3.fromRGB(255, 255, 255),
+                                [Fusion.Children] = {
+                                    scope:New 'UIGradient' {
+                                        Name = 'UIGradient',
+                                        Color = Colors.SetupTheme(windowState.Themes.Content.OuterOutline.Color),
+                                        Transparency = Colors.SetupTheme(windowState.Themes.Content.OuterOutline.Transparency, true),
+                                        Rotation = windowState.Themes.Content.OuterOutline.Rotation
+                                    }
+                                }
+                            },
+                            Fusion.ForPairs(windowState.Tabs, function(key, tabData)
+                                return TabBuilder.CreateScrollingFrame(key, tabData, windowState)
+                            end)
+                        }
+                    },
+                    scope:New 'UIStroke' {
+                        Name = 'UIStroke',
+                        Thickness = 2,
+                        Color = Color3.fromRGB(255, 255, 255),
+                        BorderStrokePosition = Enum.BorderStrokePosition.Inner,
+                        [Fusion.Children] = {
+                            scope:New 'UIGradient' {
+                                Name = 'UIGradient',
+                                Color = Colors.SetupTheme(windowState.Themes.Background.InnerOutline.Color),
+                                Transparency = Colors.SetupTheme(windowState.Themes.Background.InnerOutline.Transparency, true),
+                                Rotation = windowState.Themes.Background.InnerOutline.Rotation
+                            }
+                        }
+                    },
+                    scope:New 'Folder' {
+                        Name = 'Assets',
+                        [Fusion.Children] = {
+                            scope:New 'ImageLabel' {
+                                Name = 'Mica',
+                                ImageColor3 = Color3.fromRGB(0, 0, 0),
+                                ScaleType = Enum.ScaleType.Tile,
+                                ImageTransparency = 0.95,
+                                BackgroundColor3 = Color3.fromRGB(255, 255, 255),
+                                BackgroundTransparency = 1,
+                                Image = 'rbxassetid://9968344105',
+                                TileSize = UDim2.new(0, 100, 0, 100),
+                                ZIndex = 1000,
+                                Size = UDim2.new(1, 0, 1, 0),
+                                [Fusion.Children] = {
+                                    scope:New 'UICorner' {
+                                        Name = 'UICorner',
+                                        CornerRadius = UDim.new(0, 20)
+                                    }
+                                }
+                            }
+                        }
+                    },
+                    scope:New 'Frame' {
+                        Name = 'Topbar',
+                        BackgroundColor3 = Color3.fromRGB(255, 255, 255),
+                        BackgroundTransparency = 1,
+                        ZIndex = 2,
+                        Size = UDim2.new(1, 0, 0, 40),
+                        [Fusion.Children] = {
+                            scope:New 'Folder' {
+                                Name = 'Buttons',
+                                [Fusion.Children] = {
+                                    scope:New 'TextButton' {
+                                        Name = 'Maximize',
+                                        FontFace = Font.new('rbxasset://fonts/families/SourceSansPro.json'),
+                                        TextTransparency = 1,
+                                        BackgroundColor3 = Color3.fromRGB(255, 255, 255),
+                                        BackgroundTransparency = 1,
+                                        TextSize = 14,
+                                        Size = UDim2.new(0, 20, 0, 20),
+                                        LayoutOrder = 1,
+                                        [Fusion.OnEvent 'MouseButton1Click'] = function()
+                                            local maximized = Scoper.Unwrap(isMaximized)
+                                            isMaximized:set(not maximized)
+                                            isMinimized:set(false)
+                                        end,
+                                        [Fusion.Children] = {
+                                            scope:New 'ImageLabel' {
+                                                Name = 'Icon',
+                                                ScaleType = Enum.ScaleType.Fit,
+                                                ImageTransparency = windowState.Themes.Icons.ActionButtons.Transparency,
+                                                BackgroundColor3 = Color3.fromRGB(255, 255, 255),
+                                                AnchorPoint = Vector2.new(0.5, 0.5),
+                                                Image = 'rbxassetid://87693340107218',
+                                                BackgroundTransparency = 1,
+                                                Position = UDim2.new(0.5, 0, 0.5, 0),
+                                                Size = UDim2.new(0.45, 0, 0.45, 0),
+                                                ImageColor3 = windowState.Themes.Icons.ActionButtons.Color
+                                            }
+                                        }
+                                    },
+                                    scope:New 'UIListLayout' {
+                                        Name = 'UIListLayout',
+                                        VerticalAlignment = Enum.VerticalAlignment.Center,
+                                        FillDirection = Enum.FillDirection.Horizontal,
+                                        HorizontalAlignment = Enum.HorizontalAlignment.Right,
+                                        Padding = UDim.new(0, 10),
+                                        SortOrder = Enum.SortOrder.LayoutOrder
+                                    },
+                                    scope:New 'TextButton' {
+                                        Name = 'Minimize',
+                                        FontFace = Font.new('rbxasset://fonts/families/SourceSansPro.json'),
+                                        TextTransparency = 1,
+                                        BackgroundColor3 = Color3.fromRGB(255, 255, 255),
+                                        BackgroundTransparency = 1,
+                                        TextSize = 14,
+                                        Size = UDim2.new(0, 20, 0, 20),
+                                        [Fusion.OnEvent 'MouseButton1Click'] = function()
+                                            local minimized = Scoper.Unwrap(isMinimized)
+                                            isMinimized:set(not minimized)
+                                            isMaximized:set(false)
+                                        end,
+                                        [Fusion.Children] = {
+                                            scope:New 'ImageLabel' {
+                                                Name = 'Icon',
+                                                ScaleType = Enum.ScaleType.Fit,
+                                                ImageTransparency = windowState.Themes.Icons.ActionButtons.Transparency,
+                                                BackgroundColor3 = Color3.fromRGB(255, 255, 255),
+                                                AnchorPoint = Vector2.new(0.5, 0.5),
+                                                Image = 'rbxassetid://107591031930333',
+                                                BackgroundTransparency = 1,
+                                                Position = UDim2.new(0.5, 0, 0.5, 0),
+                                                Size = UDim2.new(0.45, 0, 0.45, 0),
+                                                ImageColor3 = windowState.Themes.Icons.ActionButtons.Color
+                                            }
+                                        }
+                                    },
+                                    scope:New 'TextButton' {
+                                        Name = 'Close',
+                                        FontFace = Font.new('rbxasset://fonts/families/SourceSansPro.json'),
+                                        TextTransparency = 1,
+                                        BackgroundColor3 = Color3.fromRGB(255, 255, 255),
+                                        BackgroundTransparency = 1,
+                                        TextSize = 14,
+                                        LayoutOrder = 2,
+                                        Size = UDim2.new(0, 20, 0, 20),
+                                        [Fusion.OnEvent 'MouseButton1Click'] = function()
+                                            isClosing:set(true)
+                                        end,
+                                        [Fusion.Children] = {
+                                            scope:New 'ImageLabel' {
+                                                Name = 'Icon',
+                                                ScaleType = Enum.ScaleType.Fit,
+                                                ImageTransparency = windowState.Themes.Icons.ActionButtons.Transparency,
+                                                BackgroundColor3 = Color3.fromRGB(255, 255, 255),
+                                                AnchorPoint = Vector2.new(0.5, 0.5),
+                                                Image = 'rbxassetid://103624613466093',
+                                                BackgroundTransparency = 1,
+                                                Position = UDim2.new(0.5, 0, 0.5, 0),
+                                                Size = UDim2.new(0.45, 0, 0.45, 0),
+                                                ImageColor3 = windowState.Themes.Icons.ActionButtons.Color
+                                            }
+                                        }
+                                    }
+                                }
+                            },
+                            scope:New 'UIPadding' {
+                                Name = 'UIPadding',
+                                PaddingLeft = UDim.new(0, 10),
+                                PaddingRight = UDim.new(0, 10)
+                            },
+                            scope:New 'Folder' {
+                                Name = 'Script',
+                                [Fusion.Children] = {
+                                    scope:New 'UIListLayout' {
+                                        Name = 'UIListLayout',
+                                        VerticalAlignment = Enum.VerticalAlignment.Center,
+                                        SortOrder = Enum.SortOrder.LayoutOrder,
+                                        Padding = UDim.new(0, 8),
+                                        FillDirection = Enum.FillDirection.Horizontal
+                                    },
+                                    scope:New 'ImageLabel' {
+                                        Name = 'Logo',
+                                        BackgroundColor3 = Color3.fromRGB(255, 255, 255),
+                                        Image = windowState.Icon,
+                                        BackgroundTransparency = 1,
+                                        Size = UDim2.new(0, 20, 0, 20)
+                                    },
+                                    scope:New 'Frame' {
+                                        Size = UDim2.fromOffset(150, 25),
+                                        LayoutOrder = 1,
+                                        BackgroundTransparency = 1,
+                                        [Fusion.Children] = {
+                                            scope:New 'UIListLayout' {
+                                                Name = 'UIListLayout',
+                                                VerticalAlignment = Enum.VerticalAlignment.Center,
+                                                HorizontalAlignment = Enum.HorizontalAlignment.Left,
+                                                SortOrder = Enum.SortOrder.LayoutOrder,
+                                                Padding = UDim.new(0, 0),
+                                                FillDirection = Enum.FillDirection.Vertical
+                                            },
+                                            scope:New 'TextLabel' {
+                                                Name = 'SubTitle',
+                                                LayoutOrder = 1,
+                                                FontFace = Font.new('rbxassetid://12187365364', Enum.FontWeight.SemiBold, Enum.FontStyle.Normal),
+                                                TextColor3 = windowState.Themes.Text.Description.Color,
+                                                Text = windowState.SubTitle,
+                                                BackgroundColor3 = Color3.fromRGB(255, 255, 255),
+                                                BackgroundTransparency = 1,
+                                                TextSize = 12,
+                                                RichText = true,
+                                                AutomaticSize = Enum.AutomaticSize.X,
+                                                Size = UDim2.new(0, 0, 0, 10)
+                                            },
+                                            scope:New 'TextLabel' {
+                                                Name = 'Title',
+                                                FontFace = Font.new('rbxassetid://12187365364', Enum.FontWeight.Bold, Enum.FontStyle.Normal),
+                                                TextColor3 = windowState.Themes.Text.Title.Color,
+                                                Text = windowState.Title,
+                                                BackgroundColor3 = Color3.fromRGB(255, 255, 255),
+                                                TextSize = 13,
+                                                BackgroundTransparency = 1,
+                                                RichText = true,
+                                                AutomaticSize = Enum.AutomaticSize.X,
+                                                Size = UDim2.new(0, 0, 0, 10),
+                                                [Fusion.Children] = {
+                                                    scope:New 'UIPadding' {
+                                                        Name = 'UIPadding',
+                                                        PaddingBottom = UDim.new(0, 1)
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            },
+                            scope:New 'Frame' {
+                                Name = 'Line',
+                                AnchorPoint = Vector2.new(0.5, 0.5),
+                                BackgroundColor3 = windowState.Themes.Background.Line.Color,
+                                BackgroundTransparency = windowState.Themes.Background.Line.Transparency,
+                                Position = UDim2.new(0.5, 0, 0.5, -3),
+                                Size = UDim2.new(0.15, 0, 0, 3),
+                                [Fusion.Children] = {
+                                    scope:New 'UICorner' {
+                                        Name = 'UICorner',
+                                        CornerRadius = UDim.new(1, 0)
+                                    }
+                                }
+                            }
+                        }
+                    },
+                    scope:New 'ScrollingFrame' {
+                        Name = 'Tabs',
+                        ScrollBarImageColor3 = Color3.fromRGB(0, 0, 0),
+                        CanvasSize = UDim2.new(),
+                        ScrollBarImageTransparency = 0.89,
+                        ScrollBarThickness = 2,
+                        AnchorPoint = Vector2.new(0, 0.5),
+                        Selectable = false,
+                        BackgroundTransparency = 1,
+                        Position = UDim2.new(0, 0, 1, 1),
+                        BackgroundColor3 = Color3.fromRGB(255, 255, 255),
+                        AutomaticCanvasSize = Enum.AutomaticSize.X,
+                        Size = UDim2.new(1, 0, 0, 20),
+                        [Fusion.OnChange 'AbsoluteWindowSize'] = function()
+                            local tabsFrame = Scoper.Unwrap(tabsFrame)
+                            local windowWidth = tabsFrame.AbsoluteWindowSize.X
+                            local canvasWidth = tabsFrame.AbsoluteCanvasSize.X
+                            local scrollable = canvasWidth > windowWidth
+                            Scoper.Unwrap(tabsFrame).UIListLayout.HorizontalAlignment = Enum.HorizontalAlignment[(scrollable and 'Left') or 'Center']
+                        end,
+                        [Fusion.Children] = {
+                            tabsFrame:set(scope:New 'UIListLayout' {
+                                Name = 'UIListLayout',
+                                VerticalAlignment = Enum.VerticalAlignment.Center,
+                                FillDirection = Enum.FillDirection.Horizontal,
+                                HorizontalAlignment = Enum.HorizontalAlignment.Center,
+                                Padding = UDim.new(0, 15),
+                                SortOrder = Enum.SortOrder.LayoutOrder
+                            }),
+                            Fusion.ForPairs(windowState.Tabs, function(key, tabData)
+                                return TabBuilder.CreateTabButton(key, tabData, windowState)
+                            end)
+                        }
+                    },
+                    scope:New 'UICorner' {
+                        Name = 'UICorner',
+                        CornerRadius = UDim.new(0, 20)
+                    },
+                    scope:New 'Frame' {
+                        Name = 'Resizers',
+                        BackgroundTransparency = 1,
+                        BackgroundColor3 = Color3.fromRGB(0, 0, 0),
+                        ZIndex = 100,
+                        Size = UDim2.new(1, 0, 1, 0),
+                        Visible = scope:Computed(function(scope)
+                            return (not scope(isMinimized))
+                        end),
+                        [Fusion.Children] = {
+                            resizingData.BottomLeftHandle:set(scope:New 'TextButton' {
+                                Name = 'BottomLeft',
+                                Active = false,
+                                BackgroundColor3 = Color3.fromRGB(255, 255, 255),
+                                AnchorPoint = Vector2.new(0, 1),
+                                Selectable = false,
+                                BackgroundTransparency = 1,
+                                Position = UDim2.new(0, 0, 1, 0),
+                                TextTransparency = 1,
+                                ZIndex = 100,
+                                Size = UDim2.fromOffset(20, 20),
+                                [Fusion.OnEvent 'InputBegan'] = function(input)
+                                    if input.UserInputType == Enum.UserInputType.MouseButton1 then
+                                        resizingData.handle = Scoper.Unwrap(resizingData.BottomLeftHandle)
+                                        resizingData.startPos = Vector2.new(Mouse.X, Mouse.Y)
+                                        resizingData.startSize = windowObject.AbsoluteSize
+                                        resizingData.windowPos = windowObject.Position
+                                        resizingState.BottomLeft:set(true)
+                                    end
+                                end,
+                                [Fusion.OnEvent 'InputEnded'] = function(input)
+                                    if input.UserInputType == Enum.UserInputType.MouseButton1 then
+                                        resizingData.handle = nil
+                                        resizingState.BottomLeft:set(false)
+                                    end
+                                end,
+                                [Fusion.OnEvent 'MouseEnter'] = function()
+                                    resizingState.FocusedBottomLeft:set(true)
+                                end,
+                                [Fusion.OnEvent 'MouseLeave'] = function()
+                                    resizingState.FocusedBottomLeft:set(false)
+                                end,
+                                [Fusion.Children] = {
+                                    scope:New 'ImageLabel' {
+                                        Name = 'Icon',
+                                        ImageColor3 = windowState.Themes.Icons.ActionButtons.Color,
+                                        Rotation = 90,
+                                        AnchorPoint = Vector2.new(0.5, 0.5),
+                                        Image = 'rbxassetid://132140133843415',
+                                        BackgroundTransparency = 1,
+                                        ZIndex = 100,
+                                        Position = UDim2.new(0.65, 0, 0.37, 0),
+                                        ImageTransparency = Scoper.Computed(function(scope)
+                                            local resizing = scope(resizingState.BottomLeft)
+                                            local focused = scope(resizingState.FocusedBottomLeft)
+                                            return (resizing and 0) or (focused and 0.2) or 0.4
+                                        end, 20, 1),
+                                        Size = Scoper.Computed(function(scope)
+                                            local resizing = scope(resizingState.BottomLeft)
+                                            local focused = scope(resizingState.FocusedBottomLeft)
+                                            local size = (resizing and 15) or (focused and 16) or 18
+                                            return UDim2.fromOffset(size, size)
+                                        end, 20, 1)
+                                    }
+                                }
+                            }),
+                            resizingData.BottomRightHandle:set(scope:New 'TextButton' {
+                                Name = 'BottomRight',
+                                Active = false,
+                                BackgroundColor3 = Color3.fromRGB(255, 255, 255),
+                                TextTransparency = 1,
+                                AnchorPoint = Vector2.new(1, 1),
+                                BackgroundTransparency = 1,
+                                Position = UDim2.new(1, 0, 1, 0),
+                                Selectable = false,
+                                ZIndex = 100,
+                                Size = UDim2.fromOffset(20, 20),
+                                [Fusion.OnEvent 'InputBegan'] = function(input)
+                                    if input.UserInputType == Enum.UserInputType.MouseButton1 then
+                                        resizingData.handle = Scoper.Unwrap(resizingData.BottomRightHandle)
+                                        resizingData.startPos = Vector2.new(Mouse.X, Mouse.Y)
+                                        resizingData.startSize = windowObject.AbsoluteSize
+                                        resizingData.windowPos = windowObject.Position
+                                        resizingState.BottomRight:set(true)
+                                    end
+                                end,
+                                [Fusion.OnEvent 'InputEnded'] = function(input)
+                                    if input.UserInputType == Enum.UserInputType.MouseButton1 then
+                                        resizingData.handle = nil
+                                        resizingState.BottomRight:set(false)
+                                    end
+                                end,
+                                [Fusion.OnEvent 'MouseEnter'] = function()
+                                    resizingState.FocusedBottomRight:set(true)
+                                end,
+                                [Fusion.OnEvent 'MouseLeave'] = function()
+                                    resizingState.FocusedBottomRight:set(false)
+                                end,
+                                [Fusion.Children] = {
+                                    scope:New 'ImageLabel' {
+                                        Name = 'Icon',
+                                        ImageColor3 = windowState.Themes.Icons.ActionButtons.Color,
+                                        AnchorPoint = Vector2.new(0.5, 0.5),
+                                        Image = 'rbxassetid://132140133843415',
+                                        BackgroundTransparency = 1,
+                                        ZIndex = 100,
+                                        Position = UDim2.new(0.35, 0, 0.37, 0),
+                                        ImageTransparency = Scoper.Computed(function(scope)
+                                            local resizing = scope(resizingState.BottomRight)
+                                            local focused = scope(resizingState.FocusedBottomRight)
+                                            return (resizing and 0) or (focused and 0.2) or 0.4
+                                        end, 20, 1),
+                                        Size = Scoper.Computed(function(scope)
+                                            local resizing = scope(resizingState.BottomRight)
+                                            local focused = scope(resizingState.FocusedBottomRight)
+                                            local size = (resizing and 15) or (focused and 16) or 18
+                                            return UDim2.fromOffset(size, size)
+                                        end, 20, 1)
+                                    }
+                                }
+                            })
+                        }
+                    },
+                    scope:New 'UIStroke' {
+                        Name = 'UIStroke',
+                        Thickness = 0.5,
+                        Color = Color3.fromRGB(255, 255, 255),
+                        [Fusion.Children] = {
+                            scope:New 'UIGradient' {
+                                Name = 'UIGradient',
+                                Color = Colors.SetupTheme(windowState.Themes.Background.OuterOutline.Color),
+                                Transparency = Colors.SetupTheme(windowState.Themes.Background.OuterOutline.Transparency, true),
+                                Rotation = windowState.Themes.Background.OuterOutline.Rotation
+                            }
+                        }
+                    },
+                    scope:New 'TextButton' {
+                        Name = 'Background',
+                        TextTransparency = 1,
+                        AutoButtonColor = false,
+                        BackgroundColor3 = Color3.fromRGB(0, 0, 0),
+                        Interactable = windowState.PopupActive,
+                        ZIndex = 10,
+                        Size = UDim2.new(1, 0, 1, 0),
+                        BackgroundTransparency = Scoper.Computed(function(scope)
+                            local popupActive = scope(windowState.PopupActive)
+                            return popupActive and 0.8 or 1
+                        end, 30, 1),
+                        [Fusion.Children] = {
+                            scope:New 'UICorner' {
+                                Name = 'UICorner',
+                                CornerRadius = UDim.new(0, 20)
+                            }
+                        }
+                    }
+                }
+            }
+            
+            local taskbarButton = scope:New 'TextButton' {
+                AutoButtonColor = false,
+                AnchorPoint = Vector2.new(0.5, 0),
+                BackgroundColor3 = Color3.fromRGB(255, 255, 255),
+                AutomaticSize = Enum.AutomaticSize.X,
+                ZIndex = 100,
+                Size = UDim2.new(0, 40, 0, 40),
+                Parent = theme.ScreenGuis.Window,
+                Position = Scoper.Computed(function(scope)
+                    local closing = scope(isClosing)
+                    return UDim2.new(0.5, 0, 0, (closing and 20) or -50)
+                end, 20, 1),
+                [Fusion.OnEvent 'MouseButton1Click'] = function()
+                    isClosing:set(false)
+                end,
+                [Fusion.Children] = {
+                    scope:New 'UIGradient' {
+                        Name = 'UIGradient',
+                        Color = Colors.SetupTheme(windowState.Themes.Background.Color),
+                        Rotation = windowState.Themes.Background.Rotation
+                    },
+                    scope:New 'TextLabel' {
+                        Size = UDim2.fromScale(0, 1),
+                        AutomaticSize = Enum.AutomaticSize.X,
+                        Text = windowState.Title,
+                        TextColor3 = windowState.Themes.Text.Title.Color,
+                        FontFace = Font.new('rbxassetid://11598289817', Enum.FontWeight.Heavy, Enum.FontStyle.Normal),
+                        TextSize = 14,
+                        BackgroundTransparency = 1
+                    },
+                    scope:New 'UICorner' {
+                        Name = 'UICorner',
+                        CornerRadius = UDim.new(0, 20)
+                    },
+                    scope:New 'UIStroke' {
+                        Name = 'UIStroke',
+                        Thickness = 0.5,
+                        Color = Color3.fromRGB(255, 255, 255),
+                        ApplyStrokeMode = Enum.ApplyStrokeMode.Border,
+                        [Fusion.Children] = {
+                            scope:New 'UIGradient' {
+                                Name = 'UIGradient',
+                                Color = Colors.SetupTheme(windowState.Themes.Background.OuterOutline.Color),
+                                Transparency = Colors.SetupTheme(windowState.Themes.Background.OuterOutline.Transparency, true),
+                                Rotation = windowState.Themes.Background.OuterOutline.Rotation
+                            }
+                        }
+                    },
+                    scope:New 'UIPadding' {
+                        Name = 'UIPadding',
+                        PaddingRight = UDim.new(0, 15),
+                        PaddingLeft = UDim.new(0, 15)
+                    },
+                    scope:New 'UIStroke' {
+                        Name = 'UIStroke',
+                        Thickness = 2,
+                        Color = Color3.fromRGB(255, 255, 255),
+                        ApplyStrokeMode = Enum.ApplyStrokeMode.Border,
+                        BorderStrokePosition = Enum.BorderStrokePosition.Inner,
+                        [Fusion.Children] = {
+                            scope:New 'UIGradient' {
+                                Name = 'UIGradient',
+                                Color = Colors.SetupTheme(windowState.Themes.Background.InnerOutline.Color),
+                                Transparency = Colors.SetupTheme(windowState.Themes.Background.InnerOutline.Transparency, true),
+                                Rotation = windowState.Themes.Background.InnerOutline.Rotation
+                            }
+                        }
+                    }
+                }
+            }
+            
+            -- Setup animations
+            Transparency.Add(windowObject)
+            Transparency.Add(taskbarButton)
+            Transparency.ControlTransparency(windowObject, 0.25, Scoper.Unwrap(windowState.Themes.WindowTransparency))
+            
+            -- Observe state changes
+            scope.Observer(isMinimized):onChange(function()
+                local minimized = Scoper.Unwrap(isMinimized)
+                Transparency.ControlTransparency(windowObject, 0.25, (minimized and 0.5) or (Scoper.Unwrap(windowState.Themes.WindowTransparency) or 0))
+            end)
+            
+            scope.Observer(isClosing):onChange(function()
+                local closing = Scoper.Unwrap(isClosing)
+                Transparency.ControlTransparency(taskbarButton, 0.25, (closing and (config.Transparency or 0)) or 1)
+            end)
+            
+            scope.Observer(windowState.Themes.WindowTransparency):onChange(function()
+                local transparency = Scoper.Unwrap(windowState.Themes.WindowTransparency)
+                local minimized = Scoper.Unwrap(isMinimized)
+                Transparency.ControlTransparency(windowObject, 0.25, (minimized and 0.5) or transparency)
+            end)
+            
+            -- Setup dragging
+            table.insert(scope, Mouse.Move:Connect(function()
+                if resizingData.handle then
+                    local delta = Vector2.new(Mouse.X, Mouse.Y) - resizingData.startPos
+                    if resizingData.startPos and resizingData.startSize and resizingData.windowPos then
+                        local handleName = resizingData.handle.Name
+                        local multipliers = (handleName == 'BottomLeft') and
+                            {X = Vector2.new(-1, 0), Y = Vector2.new(0, 1)} or
+                            {X = Vector2.new(1, 0), Y = Vector2.new(0, 1)}
+                        
+                        local newSize = Vector2.new(
+                            resizingData.startSize.X + delta.X * multipliers.X.X,
+                            resizingData.startSize.Y + delta.Y * multipliers.Y.Y
+                        )
+                        newSize = Vector2.new(
+                            math.clamp(newSize.X, minimumSize.X, maximumSize.X),
+                            math.clamp(newSize.Y, minimumSize.Y, maximumSize.Y)
+                        )
+                        
+                        local anchorDelta = Vector2.new(
+                            windowObject.AnchorPoint.X * resizingData.startSize.X,
+                            windowObject.AnchorPoint.Y * resizingData.startSize.Y
+                        ) - Vector2.new(
+                            windowObject.AnchorPoint.X * newSize.X,
+                            windowObject.AnchorPoint.Y * newSize.Y
+                        )
+                        
+                        local newPosition = UDim2.new(
+                            resizingData.windowPos.X.Scale,
+                            resizingData.windowPos.X.Offset + anchorDelta.X * multipliers.X.X,
+                            resizingData.windowPos.Y.Scale,
+                            resizingData.windowPos.Y.Offset + anchorDelta.Y * multipliers.Y.Y
+                        )
+                        
+                        windowSize:set(UDim2.new(0, newSize.X, 0, newSize.Y))
+                        windowPosition:set(newPosition)
+                    end
+                end
+            end))
+            
+            -- Setup window dragging
+            table.insert(scope, windowObject.InputBegan:Connect(function(input)
+                if (input.UserInputType == Enum.UserInputType.MouseButton1 or input.UserInputType == Enum.UserInputType.Touch) and not resizingData.handle then
+                    draggingData.isDragging = true
+                    draggingData.dragStart = input.Position
+                    draggingData.originalPosition = Scoper.Unwrap(windowPosition)
+                    input.Changed:Connect(function()
+                        if input.UserInputState == Enum.UserInputState.End then
+                            draggingData.isDragging = false
+                        end
+                    end)
+                end
+            end))
+            
+            table.insert(scope, windowObject.InputChanged:Connect(function(input)
+                if (input.UserInputType == Enum.UserInputType.MouseMovement or input.UserInputType == Enum.UserInputType.Touch) and not resizingData.handle then
+                    draggingData.dragConnection = input
+                end
+            end))
+            
+            table.insert(scope, UserInputService.InputChanged:Connect(function(input)
+                if input == draggingData.dragConnection and draggingData.isDragging and not resizingData.handle then
+                    local delta = input.Position - draggingData.dragStart
+                    local currentPos = draggingData.originalPosition
+                    windowPosition:set(UDim2.new(
+                        currentPos.X.Scale,
+                        currentPos.X.Offset + delta.X,
+                        currentPos.Y.Scale,
+                        currentPos.Y.Offset + delta.Y
+                    ))
+                end
+            end))
+            
+            -- Create window API
+            local windowAPI = {
+                Object = windowObject
+            }
+            
+            function windowAPI:AddTab(title: string)
+                local components = scope:Value({})
+                Scoper.Add(windowState.Tabs, {
+                    Title = title,
+                    Components = components
+                })
+                
+                local tabAPI = {
+                    New = function(componentType, componentConfig)
+                        local component = require(moduleData[componentType])
+                        local componentObject = component(componentConfig, windowState)
+                        Scoper.Add(components, componentObject)
+                        return componentObject
+                    end
+                }
+                
+                return tabAPI
+            end
+            
+            function windowAPI:SetTab(tabTitle: string)
+                windowState.CurrentTab:set(tabTitle)
+            end
+            
+            function windowAPI:SetTheme(themeNameOrTable)
+                local themeData = (typeof(themeNameOrTable) == 'string') and
+                    require(moduleData[104][2][themeNameOrTable]) or
+                    themeNameOrTable
+                
+                for key, value in pairs(windowState.Themes) do
+                    local themeValue = themeData[key]
+                    if themeValue ~= nil then
+                        if Scoper.IsFusionValue(value) then
+                            value:set(themeValue)
+                        elseif typeof(value) == 'table' and key ~= 'WindowTransparency' then
+                            windowAPI:SetTheme(themeValue, value)
+                        end
+                    end
+                end
+            end
+            
+            function windowAPI:SetTransparency(transparency: number)
+                windowState.Themes.WindowTransparency:set(transparency)
+            end
+            
+            function windowAPI:SetTitle(title: string)
+                windowState.Title:set(title)
+            end
+            
+            function windowAPI:SetSubTitle(subTitle: string)
+                windowState.SubTitle:set(subTitle)
+            end
+            
+            function windowAPI:SetIcon(icon: string)
+                windowState.Icon:set(icon)
+            end
+            
+            function windowAPI:Notify(notificationConfig)
+                return Notification.new(notificationConfig, windowState)
+            end
+            
+            function windowAPI:Destroy()
+                scope:doCleanup()
+            end
+            
+            return windowAPI
+        end
+        
+        return CreateWindow
+    end,
+    
+    -- Tab Module
+    function()
+        local TextService = game:GetService('TextService')
+        local Fusion = require(moduleData[19][2])
+        local Animate = require(moduleData[111][2])
+        local Transparency = require(moduleData[114][2])
+        
+        local function TabModule(windowState)
+            local tabBuilder = {}
+            
+            function tabBuilder.CreateScrollingFrame(key, tabData, windowState)
+                local scrollingFrame = Fusion.New 'ScrollingFrame' {
+                    Name = tabData.Title,
+                    Active = true,
+                    ScrollBarThickness = 3,
+                    BackgroundTransparency = 1,
+                    Position = UDim2.new(0, 0, 0, 7),
+                    Size = UDim2.new(1, 0, 1, -14),
+                    BackgroundColor3 = Color3.fromRGB(255, 255, 255),
+                    CanvasSize = UDim2.new(),
+                    AutomaticCanvasSize = Enum.AutomaticSize.Y,
+                    ScrollBarImageColor3 = windowState.Themes.Content.ScrollBarColor,
+                    [Fusion.Children] = {
+                        Fusion.New 'UIPadding' {
+                            Name = 'UIPadding',
+                            PaddingTop = Animate(function(scope)
+                                local currentTab = scope(windowState.CurrentTab) or 'None'
+                                local isActive = currentTab == tabData.Title
+                                return UDim.new(0, (isActive and 1) or 10)
+                            end, 15, 1)
+                        },
+                        Fusion.New 'UIListLayout' {
+                            Name = 'UIListLayout',
+                            SortOrder = Enum.SortOrder.LayoutOrder,
+                            HorizontalAlignment = Enum.HorizontalAlignment.Center,
+                            Padding = UDim.new(0, 7)
+                        },
+                        Fusion.ForPairs(tabData.Components, function(index, component)
+                            task.spawn(function()
+                                local windowTransparency = Fusion.peek(windowState.Themes.WindowTransparency) or 0
+                                if windowTransparency then
+                                    Transparency.Add(component.Object)
+                                    Transparency.ControlTransparency(component.Object, 0.15, windowTransparency)
+                                end
+                            end)
+                            return index, component.Object
+                        end)
+                    }
+                }
+                
+                Transparency.Add(scrollingFrame)
+                
+                -- Observer for tab switching
+                Fusion.Observer(windowState.CurrentTab):onChange(function()
+                    local currentTab = Fusion.peek(windowState.CurrentTab) or 'None'
+                    local isActive = (currentTab or 'None') == tabData.Title
+                    local transparency = Fusion.peek(windowState.Themes.WindowTransparency) or 0
+                    local targetTransparency = (isActive and transparency) or 1
+                    
+                    Transparency.ControlTransparency(scrollingFrame, 0.15, targetTransparency)
+                    scrollingFrame.Visible = true
+                    task.delay(0.15, function()
+                        scrollingFrame.Visible = isActive
+                    end)
+                end)
+                
+                return key, scrollingFrame
+            end
+            
+            function tabBuilder.CreateTabButton(key, tabData, windowState)
+                local font = Font.new('rbxassetid://12187365364', Enum.FontWeight.Heavy)
+                local textSize = TextService:GetTextSize(tabData.Title, 16, Enum.Font.SourceSans, Vector2.new(10000, 10000))
+                
+                local tabButton = Fusion.New 'TextButton' {
+                    Size = UDim2.fromOffset(textSize.X, 20),
+                    BackgroundTransparency = 1,
+                    [Fusion.OnEvent 'MouseButton1Click'] = function()
+                        windowState.CurrentTab:set(tabData.Title)
+                    end,
+                    [Fusion.Children] = {
+                        Fusion.New 'TextLabel' {
+                            Name = 'TabButton',
+                            TextColor3 = windowState.Themes.Text.Title.Color,
+                            Text = tabData.Title,
+                            Position = UDim2.fromScale(0.5, 0.5),
+                            AnchorPoint = Vector2.new(0.5, 0.5),
+                            BackgroundColor3 = Color3.fromRGB(255, 255, 255),
+                            BackgroundTransparency = 1,
+                            AutomaticSize = Enum.AutomaticSize.X,
+                            TextScaled = true,
+                            Size = Animate(function(scope)
+                                local currentTab = scope(windowState.CurrentTab) or 'None'
+                                local isActive = currentTab == tabData.Title
+                                return UDim2.fromScale(2, (isActive and 0.8) or 0)
+                            end, 30, 1),
+                            TextTransparency = Animate(function(scope)
+                                local currentTab = scope(windowState.CurrentTab) or 'None'
+                                local isActive = currentTab == tabData.Title
+                                return (isActive and 0.3) or 0.8
+                            end, 15, 1),
+                            FontFace = Fusion.Computed(function(scope)
+                                local currentTab = scope(windowState.CurrentTab) or 'None'
+                                local isActive = currentTab == tabData.Title
+                                return font
+                            end),
+                            [Fusion.Children] = {
+                                Fusion.New 'UITextSizeConstraint' {
+                                    MaxTextSize = 14,
+                                    MinTextSize = 12
+                                }
+                            }
+                        }
+                    }
+                }
+                
+                return key, tabButton
+            end
+            
+            return tabBuilder
+        end
+        
+        return TabModule
+    end
+}
+
+-- Main execution
+local mainModule = moduleImplementations[1]()
+return mainModule
